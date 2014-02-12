@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: WenderDalber
   Date: 12/02/14
-  Time: 00:46
+  Time: 01:19
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
@@ -22,39 +22,53 @@
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'jquery-1.10.2.js')}" type="text/javascript">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'modern-business.js')}" type="text/javascript">
     <meta name="layout" content="main"/>
-    <title>Pesquisar</title>
+    <title>Meu Perfil - SalaoBy.Me</title>
 </head>
 
 <body>
 
-<div class="pesquisa">
-    <div style="height: 50px">
+<div class="divPerfil">
 
-
+    <div class="divFotoPerfil">
+        Foto Usuário
     </div>
-    <div class="input-group input-group-lg">
-        <span class="input-group-addon"> <img src="images/buscarsalao.png" class="imgpesquisa"/> </span>
-        <input type="text" class="form-control" placeholder="Salão, Serviços, Endereço">
-    </div>
-    <button class="btn btn-large btn-warning">Buscar</button>
-    <div class="btn-group btn-group-lg">
-
+    <div class="divDadosPerfil">
+        Dados do usuário
     </div>
 
     <div>
+        <h3>Meus Horários:</h3>
 
-        <h2>Resultado da Pesquisa:</h2>
+        <table class="table table-bordered table-responsive table-hover">
+            <th> Salão </th>
+            <th> Horário </th>
+            <th> Serviço </th>
+            <th>Opções</th>
+            <tr>
+            <td>Tia Cotinha</td>
+            <td>Corte de Cabelo</td>
+            <td>09:00</td>
+            <td align="center"><button type="submit" class="btn btn-danger">Cancelar</button></td>
+            </tr>
+        </table>
 
     </div>
 
-    <div id="divResultados">
+    <div class="center">
+        <h3>Meus Horários Passados:</h3>
 
-        <div id="divSaloes">
-            Salões a serem exibidos
-        </div>
-        <div id="divExpandirSalao">
-            Expandir os salões
-        </div>
+        <table class="table table-bordered table-responsive table-hover center">
+            <th> Salão </th>
+            <th> Horário </th>
+            <th> Serviço </th>
+            <th>Opções</th>
+            <tr>
+                <td>Tia Cotinha</td>
+                <td>Escova</td>
+                <td>19:00</td>
+                <td align="center"><button type="submit" class="btn btn-primary">Visualizar</button></td>
+            </tr>
+        </table>
 
     </div>
 

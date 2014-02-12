@@ -14,3 +14,40 @@ body{
 	width: 500%;
 	height: 100%
 }
+
+.center
+{
+    margin: 0 auto;
+}
+
+.divResultado
+{
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+}
+
+/*CSS perfil do usuário*/
+
+.divPerfil
+{
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+}
+
+.divFotoPerfil
+{
+    width: 30%;
+    height: 30%;
+    float: left;
+    background-color: red;
+}
+
+.divDadosPerfil
+{
+    width: 70%;
+    height: 30%;
+    float:left;
+    background-color: red;
+}

@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class="active"><a href="/criselay">Principal</a></li>
-            <li><a href="#">Pesquisar</a></li>
+            <li><a href="Pesquisar">Pesquisar</a></li>
             <li><a href="#">Contato</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opções <b class="caret"></b></a>
@@ -82,7 +82,7 @@
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <p>SalaoBy.Me &copy; 2014</p>
+                <center><p><a href="http://salaoby.me"> SalaoBy.Me </a> &copy; 2014</p></center>
             </div>
         </div>
     </footer>
