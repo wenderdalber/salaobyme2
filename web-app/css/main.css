@@ -1,0 +1,16 @@
+body{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+
+.pesquisa{
+	margin: 0 auto;
+	width: 50%;
+	height: 30%;
+}
+
+.imgpesquisa{
+	width: 500%;
+	height: 100%
+}
