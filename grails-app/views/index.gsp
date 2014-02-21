@@ -4,20 +4,19 @@
     <meta name="layout" content="main"/>
     <title>SalaoBy.Me - A beleza a um click de distância!</title>
 </head>
-<body>
+<body style="background-image: url(/images/fundosalaobyme.png);">
 <div class="pesquisa">
     <div style="height: 50px">
 
+    </div>
 
-    </div>
-    <form class="form-inline">
-    <div class="input-group input-group-lg">
-        <input type="text" clasS="form-control" placeholder="Salão, Serviços, Endereço">
-        <div class="btn-group btn-group-lg">
-            <button class="btn btn-large btn-warning">Buscar</button>
-        </div>
-    </div>
-    </form>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Salões, Serviços ou Endereços">
+        <span class="input-group-btn">
+            <button class="btn btn-default btn-warning" type="button">Buscar</button>
+        </span>
+    </div><!-- /input-group -->
+
 
 </div>
 

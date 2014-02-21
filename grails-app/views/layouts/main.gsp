@@ -25,8 +25,7 @@
     <g:layoutHead/>
 </head>
 <body>
-
-<nav class="navbar navbar-inner navbar-fixed-top"  role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top"  role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <a class="navbar-brand" href="/SalaoByMe">Salaoby.me</a>
@@ -34,7 +33,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/criselay">Principal</a></li>
+            <li class="active"><a href="/salaobyme">Principal</a></li>
             <li><a href="Pesquisar">Pesquisar</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
