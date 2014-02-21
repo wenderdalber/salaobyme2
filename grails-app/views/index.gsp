@@ -10,13 +10,14 @@
 
 
     </div>
+    <form class="form-inline">
     <div class="input-group input-group-lg">
-        <span class="input-group-addon"> <img src="images/buscarsalao.png" class="imgpesquisa"/> </span>
-        <input type="text" class="form-control" placeholder="Salão, Serviços, Endereço">
+        <input type="text" clasS="form-control" placeholder="Salão, Serviços, Endereço">
+        <div class="btn-group btn-group-lg">
+            <button class="btn btn-large btn-warning">Buscar</button>
+        </div>
     </div>
-    <div class="btn-group btn-group-lg">
-        <button class="btn btn-large btn-warning">Buscar</button>
-    </div>
+    </form>
 
 </div>
 

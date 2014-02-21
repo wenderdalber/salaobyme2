@@ -5,7 +5,7 @@
   Time: 01:19
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="java.text.SimpleDateFormat; java.text.DateFormat; org.h2.util.New" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
@@ -30,7 +30,7 @@
 <div class="divPerfil">
 
     <div class="divFotoPerfil">
-        Foto Usuário
+        Logo
     </div>
     <div class="divDadosPerfil">
         Dados do usuário
@@ -69,6 +69,17 @@
                 <td align="center"><button type="submit" class="btn btn-primary">Visualizar</button></td>
             </tr>
         </table>
+
+        <%
+
+            def today = new Date()
+
+            //def date = Calendar.getInstance()
+            //DateFormat df = New SimpleDateFormat("dd/MM/yyyy")
+            def dia = Date.parse("dd/MM/yy", today.dateString ).format("EEEE")
+            //def a = df.format(date.getTime())
+            print dia
+            %>
 
     </div>
 

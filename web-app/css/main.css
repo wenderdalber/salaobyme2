@@ -49,5 +49,14 @@ body{
     width: 70%;
     height: 30%;
     float:left;
+    color: #ffff00;
     background-color: red;
+}
+
+.navbar-inner {
+    background-color: #fff3f3; /* background color will be black for all browsers */
+    color: #ffffff;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
 }
