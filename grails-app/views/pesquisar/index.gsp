@@ -33,10 +33,12 @@
 
     </div>
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Salões, Serviços ou Endereços">
+        <g:form controller="pesquisar" action="search" method="GET">
+        <input type="text" name="pesquisar" class="form-control" placeholder="Salões, Serviços ou Endereços">
         <span class="input-group-btn">
-            <button class="btn btn-default btn-warning" type="button">Buscar</button>
+            <button type class="btn btn-default btn-warning" type="submit">Buscar</button>
         </span>
+        </g:form>
     </div><!-- /input-group -->
 
     </div>

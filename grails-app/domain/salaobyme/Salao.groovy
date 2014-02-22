@@ -13,5 +13,6 @@ class Salao {
     static constraints = {
         nome nullable:false, blank:false
         cnpj nullable:false, blank:false
+        endereco nullable:true
     }
 }

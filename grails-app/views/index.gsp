@@ -11,7 +11,7 @@
     </div>
 
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Salões, Serviços ou Endereços">
+        <input type="text" name="pesquisar" id="pesquisar" class="form-control" placeholder="Salões, Serviços ou Endereços">
         <span class="input-group-btn">
             <button class="btn btn-default btn-warning" type="button">Buscar</button>
         </span>
