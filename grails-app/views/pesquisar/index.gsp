@@ -33,7 +33,7 @@
 
     </div>
     <div class="input-group">
-        <g:form controller="pesquisar" action="search" method="GET">
+        <g:form controller="pesquisar" action="buscar" method="GET">
         <input type="text" name="pesquisar" class="form-control" placeholder="Salões, Serviços ou Endereços">
         <span class="input-group-btn">
             <button type class="btn btn-default btn-warning" type="submit">Buscar</button>

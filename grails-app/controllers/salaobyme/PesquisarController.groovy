@@ -10,14 +10,13 @@ class PesquisarController {
         def dayOfMonth = date.getAt(Calendar.DAY_OF_WEEK)
     }
 
-    def search() {
-        def pesquisa2 = params.pesquisar.split(" ")
-        def pesquisa = pesquisa2.collect{ String palavra ->
+    def buscar() {
+        def arrayPalavras = params.pesquisar.split(" ")
+        def pesquisa = arrayPalavras.collect{ String palavra ->
             (palavra.length() > 3)? palavra : null
-
         }
 
-        def Saloes = Salao.createCriteria().list{
+        def saloes = Salao.createCriteria().list{
             createAlias("servicos","servico")
             createAlias("servico.categoria","categoria")
 
@@ -42,5 +41,6 @@ class PesquisarController {
             }
 
         }
+        render(view: "buscar", model: [saloes:saloes])
     }
 }

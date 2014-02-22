@@ -101,10 +101,40 @@ class ReservaController {
     }
 
     def horario(){
-        def dias=[1:"Domingo", 2:"Segunda", 3:"Terça", 4:"Quarta", 5:"Quinta",6:"Sexta",7:"Sábado"]
+
+        Servico servico = Servico.get(1)
+        Salao salao = Salao.get(1)
+
+
+        def diasExtenso=[1:"Domingo", 2:"Segunda", 3:"Terça", 4:"Quarta", 5:"Quinta",6:"Sexta",7:"Sábado"]
         def today = new Date()
+        def datas = [today, today.plus(1), today.plus(2), today.plus(3), today.plus(4), today.plus(5), today.plus(6)]
         def dia = new Date().toCalendar().get(Calendar.DAY_OF_WEEK)
-        //def dia = Date.parse("dd/MM/yy", today.dateString ).format("EEEE")
-        render(view: "/reserva/horario",model :[today:today, dia:dia, diaExtenso:dias[dia]] )
+        def todosHorarios = ["08:00", "08:30", "09:00", "09:30", "10:00"]
+        def reservas = Reserva.findAllByServicoAndSalaoAndSituacao(servico,salao,Reserva.ATIVA)
+
+        def dataHoraReservas = []
+        reservas.each{ reserva ->
+            dataHoraReservas += reserva.dataReserva.format("dd/MM/yyyy")+" "+reserva.diaHorario.horario.horaInicio
+        }
+        println "Reservas"
+        println dataHoraReservas
+
+        def horariosOcupados = [:]
+        datas.each{ data ->
+            todosHorarios.each{ hora ->
+                println data.format("dd/MM/yyyy")+" "+hora+"--------------"
+                dataHoraReservas.each{println it+"--"}
+                println dataHoraReservas.find({it==data.format("dd/MM/yyyy")+" "+hora})
+             if(dataHoraReservas.find({it==data.format("dd/MM/yyyy")+" "+hora})!= null)
+             {
+                 print "agora vai!!"
+                 horariosOcupados+=[(data.format("dd/MM/yyyy")+" "+hora):true]
+             }
+            }
+        }
+
+
+        render(view: "/reserva/horario",model :[datas:datas, todosHorarios:todosHorarios, reservas:reservas, horariosOcupados:horariosOcupados] )
     }
 }
