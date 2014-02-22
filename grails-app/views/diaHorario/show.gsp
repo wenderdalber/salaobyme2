@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list diaHorario">
 			
+				<g:if test="${diaHorarioInstance?.dia}">
+				<li class="fieldcontain">
+					<span id="dia-label" class="property-label"><g:message code="diaHorario.dia.label" default="Dia" /></span>
+					
+						<span class="property-value" aria-labelledby="dia-label"><g:link controller="dia" action="show" id="${diaHorarioInstance?.dia?.id}">${diaHorarioInstance?.dia?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${diaHorarioInstance?.horario}">
+				<li class="fieldcontain">
+					<span id="horario-label" class="property-label"><g:message code="diaHorario.horario.label" default="Horario" /></span>
+					
+						<span class="property-value" aria-labelledby="horario-label"><g:link controller="horario" action="show" id="${diaHorarioInstance?.horario?.id}">${diaHorarioInstance?.horario?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${diaHorarioInstance?.status}">
 				<li class="fieldcontain">
 					<span id="status-label" class="property-label"><g:message code="diaHorario.status.label" default="Status" /></span>

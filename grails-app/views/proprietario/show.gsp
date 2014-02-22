@@ -88,6 +88,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${proprietarioInstance?.saloes}">
+				<li class="fieldcontain">
+					<span id="saloes-label" class="property-label"><g:message code="proprietario.saloes.label" default="Saloes" /></span>
+					
+						<g:each in="${proprietarioInstance.saloes}" var="s">
+						<span class="property-value" aria-labelledby="saloes-label"><g:link controller="salao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

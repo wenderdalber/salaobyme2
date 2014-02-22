@@ -8,6 +8,9 @@ class Endereco {
     String cep
     String cidade
     String estado
+    Salao salao
+
+    static belongsTo = [Salao]
 
     static constraints = {
         logradouro nullable:false, blank: false

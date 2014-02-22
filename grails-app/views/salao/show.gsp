@@ -59,6 +59,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${salaoInstance?.servicos}">
+				<li class="fieldcontain">
+					<span id="servicos-label" class="property-label"><g:message code="salao.servicos.label" default="Servicos" /></span>
+					
+						<g:each in="${salaoInstance.servicos}" var="s">
+						<span class="property-value" aria-labelledby="servicos-label"><g:link controller="servico" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

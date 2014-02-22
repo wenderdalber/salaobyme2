@@ -32,11 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${reservaInstance?.horario}">
+				<g:if test="${reservaInstance?.diaHorario}">
 				<li class="fieldcontain">
-					<span id="horario-label" class="property-label"><g:message code="reserva.horario.label" default="Horario" /></span>
+					<span id="diaHorario-label" class="property-label"><g:message code="reserva.diaHorario.label" default="Dia Horario" /></span>
 					
-						<span class="property-value" aria-labelledby="horario-label"><g:link controller="horario" action="show" id="${reservaInstance?.horario?.id}">${reservaInstance?.horario?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="diaHorario-label"><g:link controller="diaHorario" action="show" id="${reservaInstance?.diaHorario?.id}">${reservaInstance?.diaHorario?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

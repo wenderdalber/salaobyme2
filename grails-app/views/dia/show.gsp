@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${diaInstance?.salao}">
+				<li class="fieldcontain">
+					<span id="salao-label" class="property-label"><g:message code="dia.salao.label" default="Salao" /></span>
+					
+						<span class="property-value" aria-labelledby="salao-label"><g:link controller="salao" action="show" id="${diaInstance?.salao?.id}">${diaInstance?.salao?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

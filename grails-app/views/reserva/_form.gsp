@@ -10,12 +10,12 @@
 	<g:datePicker name="dataReserva" precision="day"  value="${reservaInstance?.dataReserva}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: reservaInstance, field: 'horario', 'error')} required">
-	<label for="horario">
-		<g:message code="reserva.horario.label" default="Horario" />
+<div class="fieldcontain ${hasErrors(bean: reservaInstance, field: 'diaHorario', 'error')} required">
+	<label for="diaHorario">
+		<g:message code="reserva.diaHorario.label" default="Dia Horario" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="horario" name="horario.id" from="${salaobyme.Horario.list()}" optionKey="id" required="" value="${reservaInstance?.horario?.id}" class="many-to-one"/>
+	<g:select id="diaHorario" name="diaHorario.id" from="${salaobyme.DiaHorario.list()}" optionKey="id" required="" value="${reservaInstance?.diaHorario?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: reservaInstance, field: 'salao', 'error')} required">

@@ -3,10 +3,8 @@ package salaobyme
 class DiaHorario {
 
     int status
-    List<Dia> dias
-    List<Horario> horarios
-
-    static hasMany = [Dia, Horario]
+    Dia dia
+    Horario horario
 
     static constraints = {
     }

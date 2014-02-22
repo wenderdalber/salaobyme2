@@ -50,3 +50,11 @@
 	<g:textField name="cep" value="${enderecoInstance?.cep}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: enderecoInstance, field: 'salao', 'error')} required">
+	<label for="salao">
+		<g:message code="endereco.salao.label" default="Salao" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="salao" name="salao.id" from="${salaobyme.Salao.list()}" optionKey="id" required="" value="${enderecoInstance?.salao?.id}" class="many-to-one"/>
+</div>
+

@@ -7,6 +7,7 @@ class Salao {
     Endereco endereco
     Proprietario proprietario
 
+    static hasMany = [servicos:Servico]
     static belongsTo = [Proprietario, Endereco]
 
     static constraints = {

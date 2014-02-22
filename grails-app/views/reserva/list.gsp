@@ -26,7 +26,7 @@
 					
 						<g:sortableColumn property="dataReserva" title="${message(code: 'reserva.dataReserva.label', default: 'Data Reserva')}" />
 					
-						<th><g:message code="reserva.horario.label" default="Horario" /></th>
+						<th><g:message code="reserva.diaHorario.label" default="Dia Horario" /></th>
 					
 						<th><g:message code="reserva.salao.label" default="Salao" /></th>
 					
@@ -44,7 +44,7 @@
 					
 						<td><g:link action="show" id="${reservaInstance.id}">${fieldValue(bean: reservaInstance, field: "dataReserva")}</g:link></td>
 					
-						<td>${fieldValue(bean: reservaInstance, field: "horario")}</td>
+						<td>${fieldValue(bean: reservaInstance, field: "diaHorario")}</td>
 					
 						<td>${fieldValue(bean: reservaInstance, field: "salao")}</td>
 					

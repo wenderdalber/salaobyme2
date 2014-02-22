@@ -34,3 +34,11 @@
 	<g:select id="proprietario" name="proprietario.id" from="${salaobyme.Proprietario.list()}" optionKey="id" required="" value="${salaoInstance?.proprietario?.id}" class="many-to-one"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: salaoInstance, field: 'servicos', 'error')} ">
+	<label for="servicos">
+		<g:message code="salao.servicos.label" default="Servicos" />
+		
+	</label>
+	<g:select name="servicos" from="${salaobyme.Servico.list()}" multiple="multiple" optionKey="id" size="5" value="${salaoInstance?.servicos*.id}" class="many-to-many"/>
+</div>
+
