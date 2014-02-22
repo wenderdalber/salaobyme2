@@ -65,7 +65,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Salao.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Salao.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy">
 <<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
@@ -93,7 +93,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="39" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.1875" vertical-offset="0" max-vertical-offset="391">
+            <state line="10" column="36" selection-start="195" selection-end="195" vertical-scroll-proportion="0.51359516" vertical-offset="0" max-vertical-offset="391">
               <folding />
             </state>
           </provider>
@@ -141,7 +141,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="91" selection-end="91" vertical-scroll-proportion="-2.125" vertical-offset="0" max-vertical-offset="476">
+            <state line="12" column="29" selection-start="184" selection-end="189" vertical-scroll-proportion="-4.25" vertical-offset="0" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -171,13 +171,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Usuario.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Usuario.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Usuario.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.3081571" vertical-offset="17" max-vertical-offset="374">
+            <state line="7" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="-2.125" vertical-offset="17" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -245,8 +245,8 @@
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Usuario.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Proprietario.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Reserva.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Servico.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy" />
       </list>
     </option>
   </component>
@@ -629,17 +629,25 @@
       <workItem from="1393077048324" duration="136000" />
 =======
       <workItem from="1393026055564" duration="11548000" />
+<<<<<<< HEAD
+      <workItem from="1393069602452" duration="4442000" />
+=======
       <workItem from="1393069602452" duration="3815000" />
 >>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="41429000" />
+=======
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="26379000" />
 =======
     <option name="totallyTimeSpent" value="40802000" />
 >>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1071,16 +1079,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Endereco.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="91" selection-end="91" vertical-scroll-proportion="-2.125" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Horario.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
@@ -1096,13 +1094,9 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="4" column="55" selection-start="107" selection-end="107" vertical-scroll-proportion="0.111658454" vertical-offset="0" max-vertical-offset="1037" />
-=======
         <state line="8" column="34" selection-start="146" selection-end="146" vertical-scroll-proportion="-2.8333333" vertical-offset="0" max-vertical-offset="374">
           <folding />
         </state>
->>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Reserva.groovy">
@@ -1111,22 +1105,16 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-        <state line="41" column="40" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.4373928" vertical-offset="442" max-vertical-offset="1360" />
-=======
         <state line="15" column="31" selection-start="270" selection-end="277" vertical-scroll-proportion="-4.5" vertical-offset="39" max-vertical-offset="442">
+=======
+<<<<<<< HEAD
+        <state line="4" column="55" selection-start="107" selection-end="107" vertical-scroll-proportion="0.111658454" vertical-offset="0" max-vertical-offset="1037" />
+=======
+        <state line="8" column="34" selection-start="146" selection-end="146" vertical-scroll-proportion="-2.8333333" vertical-offset="0" max-vertical-offset="374">
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
           <folding />
         </state>
 >>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="158" selection-end="158" vertical-scroll-proportion="-3.1875" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Categoria.groovy">
@@ -1134,6 +1122,37 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="5" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-1.7708334" vertical-offset="0" max-vertical-offset="306">
+=======
+<<<<<<< HEAD
+        <state line="41" column="40" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.4373928" vertical-offset="442" max-vertical-offset="1360" />
+=======
+        <state line="15" column="31" selection-start="270" selection-end="277" vertical-scroll-proportion="-4.5" vertical-offset="39" max-vertical-offset="442">
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
+          <folding />
+        </state>
+>>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Servico.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.5416667" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Usuario.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="7" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="-2.125" vertical-offset="17" max-vertical-offset="374">
+=======
 <<<<<<< HEAD
         <state line="7" column="13" selection-start="224" selection-end="224" vertical-scroll-proportion="0.11929824" vertical-offset="51" max-vertical-offset="2312" />
       </provider>
@@ -1149,22 +1168,31 @@
 =======
         <state line="5" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-1.7708334" vertical-offset="0" max-vertical-offset="306">
 >>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Endereco.groovy">
+=======
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="21" selection-start="87" selection-end="87" vertical-scroll-proportion="-2.125" vertical-offset="0" max-vertical-offset="374">
 =======
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Servico.groovy">
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="12" column="29" selection-start="184" selection-end="189" vertical-scroll-proportion="-4.25" vertical-offset="0" max-vertical-offset="476">
+=======
         <state line="10" column="34" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.5416667" vertical-offset="0" max-vertical-offset="391">
 >>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
           <folding />
         </state>
       </provider>
@@ -1173,17 +1201,25 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy">
+=======
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/DiaHorario.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="34" selection-start="135" selection-end="135" vertical-scroll-proportion="0.15981199" vertical-offset="0" max-vertical-offset="851">
 =======
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Usuario.groovy">
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state line="10" column="36" selection-start="195" selection-end="195" vertical-scroll-proportion="0.51359516" vertical-offset="0" max-vertical-offset="391">
+=======
         <state line="7" column="0" selection-start="86" selection-end="86" vertical-scroll-proportion="0.3081571" vertical-offset="17" max-vertical-offset="374">
 >>>>>>> 2553281ef5099f2c3d9d6cadaa9b7699d7a7de89
+>>>>>>> 02ecd21e3e82e8142ecc2396bdc84231fc3a5645
           <folding />
         </state>
       </provider>
