@@ -24,6 +24,10 @@
 				<thead>
 					<tr>
 					
+						<th><g:message code="diaHorario.dia.label" default="Dia" /></th>
+					
+						<th><g:message code="diaHorario.horario.label" default="Horario" /></th>
+					
 						<g:sortableColumn property="status" title="${message(code: 'diaHorario.status.label', default: 'Status')}" />
 					
 					</tr>
@@ -32,7 +36,11 @@
 				<g:each in="${diaHorarioInstanceList}" status="i" var="diaHorarioInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${diaHorarioInstance.id}">${fieldValue(bean: diaHorarioInstance, field: "status")}</g:link></td>
+						<td><g:link action="show" id="${diaHorarioInstance.id}">${fieldValue(bean: diaHorarioInstance, field: "dia")}</g:link></td>
+					
+						<td>${fieldValue(bean: diaHorarioInstance, field: "horario")}</td>
+					
+						<td>${fieldValue(bean: diaHorarioInstance, field: "status")}</td>
 					
 					</tr>
 				</g:each>

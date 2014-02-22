@@ -2,8 +2,9 @@ package salaobyme
 
 class Servico {
 
+
     String descricao
-    int status
+    boolean status
     Double preco
     Categoria categoria
 

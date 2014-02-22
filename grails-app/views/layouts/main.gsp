@@ -37,18 +37,18 @@
             <li><a href="Pesquisar">Pesquisar</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Cadastrar</a></li>
+            <li><a href="Usuario/Create">Cadastrar</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <form role="form">
+                    <form action="authenticate" method="post" role="form">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">E-mail</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            <label for="nome">Nome de Usuário</label>
+                            <input type="text" class="form-control" id="nome" placeholder="nome de usuário">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">******</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" placeholder="******">
                         </div>
                         <button type="submit" class="btn btn-primary">Entrar</button>
                     </form>
@@ -57,12 +57,16 @@
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
+<div class="container">
 <g:layoutBody/>
+</div>
 <div class="footer" role="contentinfo">
     <footer>
         <div class="row">
             <div class="col-lg-12">
-                <center><p><a href="http://salaoby.me"> SalaoBy.Me </a> &copy; 2014</p></center>
+                <center><p><a href="http://salaoby.me"> SalaoBy.Me </a> &copy; 2014
+                        <g:if test="${flash.message}"></g:if>
+                </p></center>
             </div>
         </div>
     </footer>

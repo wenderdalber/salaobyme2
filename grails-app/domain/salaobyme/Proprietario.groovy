@@ -6,6 +6,8 @@ class Proprietario extends Usuario {
     String telefone
     String celular
 
+    static hasMany = [saloes:Salao]
+
     static constraints = {
         cpf nullable:false, blank:false
         telefone nullable:false, blank:false

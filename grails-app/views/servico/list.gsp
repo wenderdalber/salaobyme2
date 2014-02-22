@@ -44,7 +44,7 @@
 					
 						<td>${fieldValue(bean: servicoInstance, field: "categoria")}</td>
 					
-						<td>${fieldValue(bean: servicoInstance, field: "status")}</td>
+						<td><g:formatBoolean boolean="${servicoInstance.status}" /></td>
 					
 					</tr>
 				</g:each>

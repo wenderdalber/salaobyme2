@@ -67,3 +67,20 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: proprietarioInstance, field: 'saloes', 'error')} ">
+	<label for="saloes">
+		<g:message code="proprietario.saloes.label" default="Saloes" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${proprietarioInstance?.saloes?}" var="s">
+    <li><g:link controller="salao" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="salao" action="create" params="['proprietario.id': proprietarioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'salao.label', default: 'Salao')])}</g:link>
+</li>
+</ul>
+
+</div>
+

@@ -5,7 +5,6 @@ class Usuario {
     String nome
     String email
     String senha
-    List<Reserva> reservas
 
     static hasMany = [reservas:Reserva]
 

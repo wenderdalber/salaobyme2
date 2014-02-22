@@ -32,12 +32,12 @@
 
 
     </div>
-    <div class="input-group input-group-lg">
-        <span class="input-group-addon"> <img src="images/buscarsalao.png" class="imgpesquisa"/> </span>
-        <input type="text" class="form-control" placeholder="Salão, Serviços, Endereço">
-    </div>
-    <button class="btn btn-large btn-warning">Buscar</button>
-    <div class="btn-group btn-group-lg">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Salões, Serviços ou Endereços">
+        <span class="input-group-btn">
+            <button class="btn btn-default btn-warning" type="button">Buscar</button>
+        </span>
+    </div><!-- /input-group -->
 
     </div>
 

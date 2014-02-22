@@ -63,8 +63,8 @@ class ServicoController {
         if (version != null) {
             if (servicoInstance.version > version) {
                 servicoInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                        [message(code: 'servico.label', default: 'Servico')] as Object[],
-                        "Another user has updated this Servico while you were editing")
+                          [message(code: 'servico.label', default: 'Servico')] as Object[],
+                          "Another user has updated this Servico while you were editing")
                 render(view: "edit", model: [servicoInstance: servicoInstance])
                 return
             }

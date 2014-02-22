@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="dia" title="${message(code: 'dia.dia.label', default: 'Dia')}" />
 					
+						<th><g:message code="dia.salao.label" default="Salao" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -33,6 +35,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${diaInstance.id}">${fieldValue(bean: diaInstance, field: "dia")}</g:link></td>
+					
+						<td>${fieldValue(bean: diaInstance, field: "salao")}</td>
 					
 					</tr>
 				</g:each>
