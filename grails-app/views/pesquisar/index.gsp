@@ -22,7 +22,29 @@
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'jquery-1.10.2.js')}" type="text/javascript">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'modern-business.js')}" type="text/javascript">
     <meta name="layout" content="main"/>
+    <g:javascript library="jquery" plugin="jquery" />
     <title>Pesquisar</title>
+
+    <style>
+        #divExpandirSalao{
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            background-color: #ffffff;
+            padding: 15px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function abrirSalao(){
+            JQuery("#divExpandirSalao").fadeIn;
+        }
+        function fecharSalao(){
+            JQuery("#divExpandirSalao").fadeOut;
+        }
+    </script>
+
+
 </head>
 
 <body>
@@ -32,14 +54,12 @@
 
 
     </div>
-    <div class="input-group">
-        <g:form controller="pesquisar" action="buscar" method="GET">
-        <input type="text" name="pesquisar" class="form-control" placeholder="Salões, Serviços ou Endereços">
-        <span class="input-group-btn">
-            <button type class="btn btn-default btn-warning" type="submit">Buscar</button>
-        </span>
-        </g:form>
-    </div><!-- /input-group -->
+    <form class="form-inline" role="form">
+        <div class="form-group col-sm-10">
+            <input type="text" class="form-control" id="buscar" name=buscar placeholder="Salões, serviços ou endereços">
+        </div>
+        <button type="submit" class="btn btn-warning">Buscar</button>
+    </form>
 
     </div>
 
@@ -52,15 +72,29 @@
     <div id="divResultados">
 
         <div id="divSaloes">
+            
             Salões a serem exibidos
+            <a href="javascript: abrirSalao()">Dados do Salão</a>
         </div>
         <div id="divExpandirSalao">
+            
+            <g:formRemote name="form" url="[controller:'pesquisar',action:'search']">
+
+            </g:formRemote>
+            
             Expandir os salões
+            <a href="javascript: fecharSalao()">Fechar</a>
         </div>
 
     </div>
 
 </div>
+
+<script type="text/javascript">
+
+    fecharSalao();
+
+</script>
 
 <!-- JavaScript -->
 <script src="js/jquery-1.10.2.js"></script>

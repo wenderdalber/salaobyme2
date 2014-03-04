@@ -28,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -37,68 +37,58 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="http://www.jquery2dotnet.com">Brand</a>
+                    <a class="navbar-brand" href="/SalaoByMe">SalaoBy.me</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="http://www.jquery2dotnet.com">Home</a></li>
-                        <li><a href="http://www.jquery2dotnet.com">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="http://www.jquery2dotnet.com">Action</a></li>
-                                <li><a href="http://www.jquery2dotnet.com">Another action</a></li>
-                                <li><a href="http://www.jquery2dotnet.com">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="http://www.jquery2dotnet.com">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="http://www.jquery2dotnet.com">One more separated link</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="Pesquisar">Pesquisar</a></li>
+                        <li><a href="/Sobre">Sobre</a></li>
                     </ul>
-                    <form class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="http://www.jquery2dotnet.com">Sign Up</a></li>
+                        <li><a href="Usuario/Create">Cadastrar</a></li>
+                        <g:if test="session.getAttribute('usuario') == null">
                         <li class="dropdown">
-                            <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
                             <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <g:form class="form" role="form" method="post" controller="Usuario" action="login" accept-charset="UTF-8" id="login-nav">
                                                 <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                    <label class="sr-only" for="exampleInputEmail2">E-mail</label>
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="e-mail" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                    <label class="sr-only" for="exampleInputPassword2">Senha</label>
+                                                    <input type="password" class="form-control" id="senha" name="senha" placeholder="******" required>
                                                 </div>
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox"> Remember me
+                                                        <input type="checkbox"> Lembrar-me
                                                     </label>
                                                 </div>
                                                 <div class="form-group">
-                                                    <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                                                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                                                    ${flash.message}
                                                 </div>
-                                            </form>
+                                            </g:form>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
-                                    <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+                                    <input class="btn btn-danger btn-block" type="button" id="sign-in-google" value="Esqueci minha senha">
                                 </li>
                             </ul>
                         </li>
+                       </g:if>
+                        <g:if test="session.getAttribute('usuario') != null)">
+                            <ul>
+                                <li>Sair</li>
+                            </ul>
+                        </g:if>
                     </ul>
                 </div>
 

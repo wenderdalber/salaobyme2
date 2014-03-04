@@ -81,6 +81,24 @@ class UsuarioController {
         redirect(action: "show", id: usuarioInstance.id)
     }
 
+    def login(){
+
+        String email = params.email
+        String senha = params.senha
+
+        Usuario usuario = Usuario.findByEmailAndSenha(email, senha)
+        if(usuario != null){
+
+            session.setAttribute("usuario", usuario)
+            flash.message="Logou"
+            redirect(uri:"/")
+
+        }else{
+            flash.message="E-mail e/ou senhas incorretos"
+            redirect(uri:"/")
+        }
+    }
+
     def delete(Long id) {
         def usuarioInstance = Usuario.get(id)
         if (!usuarioInstance) {

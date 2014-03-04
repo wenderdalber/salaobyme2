@@ -10,57 +10,15 @@
 
     </div>
 
-    <div class="input-group">
-        <g:form controller="pesquisar" action="buscar" method="GET">
-        <input type="text" name="pesquisar" id="pesquisar" class="form-control" placeholder="Salões, Serviços ou Endereços">
-        <span class="input-group-btn">
-            <button class="btn btn-default btn-warning" type="submit">Buscar</button>
-        </g:form>
-        </span>
-    </div><!-- /input-group -->
+    <form class="form-inline" role="form">
+        <div class="form-group col-sm-10">
+            <input type="text" class="form-control" id="buscar" name=buscar placeholder="Salões, serviços ou endereços">
+        </div>
+        <button type="submit" class="btn btn-warning">Buscar</button>
+    </form>
 
 
 </div>
-
-<div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('images/01.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Os melhores salões e serviços a um click de distância!</h1>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/02.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Maquiagens para festas, casamentos e demais eventos sociais!</h1>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/03.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h1>
-            </div>
-        </div>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</div>
-
 <div class="section">
 
     <div class="container">
@@ -71,13 +29,13 @@
                 <hr>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450"></a>
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="images/01.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450"></a>
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="images/02.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450"></a>
+                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="images/03.jpg"></a>
             </div>
         </div><!-- /.row -->
 
@@ -121,6 +79,45 @@
 <div class="container">
 
     <hr>
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('images/01.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>Os melhores salões e serviços a um click de distância!</h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('images/buscarsalao.png');"></div>
+                <div class="carousel-caption">
+                    <h1>Maquiagens para festas, casamentos e demais eventos sociais!</h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('images/03.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
 
 </div><!-- /.container -->
 

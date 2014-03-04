@@ -7,6 +7,7 @@ class Servico {
     boolean status
     Double preco
     Categoria categoria
+    int tempoServico
 
     static belongsTo = [Categoria]
 
