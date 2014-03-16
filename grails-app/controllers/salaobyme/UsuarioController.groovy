@@ -10,6 +10,10 @@ class UsuarioController {
         redirect(action: "list", params: params)
     }
 
+    def Admin(){
+        //redirect(action: "Admin")
+    }
+
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [usuarioInstanceList: Usuario.list(params), usuarioInstanceTotal: Usuario.count()]
@@ -81,24 +85,6 @@ class UsuarioController {
         redirect(action: "show", id: usuarioInstance.id)
     }
 
-    def login(){
-
-        String email = params.email
-        String senha = params.senha
-
-        Usuario usuario = Usuario.findByEmailAndSenha(email, senha)
-        if(usuario != null){
-
-            session.setAttribute("usuario", usuario)
-            flash.message="Logou"
-            redirect(uri:"/")
-
-        }else{
-            flash.message="E-mail e/ou senhas incorretos"
-            redirect(uri:"/")
-        }
-    }
-
     def delete(Long id) {
         def usuarioInstance = Usuario.get(id)
         if (!usuarioInstance) {
@@ -116,5 +102,34 @@ class UsuarioController {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
             redirect(action: "show", id: id)
         }
+    }
+
+    def login(){
+
+        String email = params.txtEmail
+        String senha = params.txtSenha
+
+        Usuario usuario = Usuario.findByEmailAndSenha(email, senha)
+        if(usuario != null){
+
+            if(usuario.permissao == "Admin"){
+                session.setAttribute("usuarioId", usuario.id)
+                session.setAttribute("usuarioNome", usuario.nome)
+                flash.message = "Logou"
+                redirect(uri: "Admin")
+            }else{
+                session.setAttribute("usuarioId", usuario.id)
+                session.setAttribute("usuarioNome", usuario.nome)
+                flash.message = "Logou"
+                redirect(uri: "/")
+            }
+
+        }else{
+            flash.message("Usuário ou senha Incorretos")
+        }
+    }
+    def Sair(){
+        session.invalidate();
+        redirect(rui: "/")
     }
 }

@@ -1,15 +1,17 @@
 body
 {
-	background-color: #FFEBCD;
+	/*background-color: #FFEBCD;*/
+    background-image: url('../images/fundosalaobyme.png');
 }
 
 .div
 {
-	background-color:#EDEDED;
+	/*background-color:#EDEDED;*/
 	height:35px;
 	border-radius: 10px;
 	font: 14px Tahoma;
-	font-weight: bold;	
+	font-weight: bold;
+    background-image: url('../images/fundosalaobyme.png');
 }
 
 .grid
@@ -34,9 +36,9 @@ body
 			height: 35px;
 			border-radius: 10px;
 		}
- 
+
 		.menu ul li { display: inline; }
- 
+
 		.menu ul li a {
 			background-color:#EDEDED;
 			color: #333;
@@ -45,7 +47,7 @@ body
 			padding: 2px 10px;
 			float:left;
 		}
- 
+
 		.menu ul li a:hover {
 			background-color:#D6D6D6;
 			color: #6D6D6D;
@@ -57,7 +59,7 @@ body
 	height: auto;
 	float:left;
 }
-		
+
 /*Login*/
 
 .login
@@ -123,4 +125,23 @@ body
 	font-style: italic;
 	width: 75px;
 	height: 25px;
+}
+
+.pegaTudo{
+    width: 50%;
+    height: auto;
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow:    3px 3px 5px 6px;
+    -webkit-box-shadow: 3px 3px 5px 6px;
+    box-shadow:         3px 3px 5px 6px;
+}
+
+.textField{
+    background-color: #F8F8F8;
+}
+
+.centralizar{
+    padding: 20px 0 20px 20px;
 }

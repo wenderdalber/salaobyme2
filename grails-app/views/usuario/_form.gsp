@@ -2,37 +2,52 @@
 
 
 
-<form class="form-horizontal">
-    <fieldset>
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'nome', 'error')} required">
+	<label for="nome">
+		<g:message code="usuario.nome.label" default="Nome" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="nome" required="" value="${usuarioInstance?.nome}"/>
+</div>
 
-        <!-- Form Name -->
-        <legend>Form Name</legend>
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'email', 'error')} required">
+	<label for="email">
+		<g:message code="usuario.email.label" default="Email" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="email" name="email" required="" value="${usuarioInstance?.email}"/>
+</div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="nome">Nome</label>
-            <div class="col-md-6">
-                <g:textField name="nome" required="" class="form-control input-md" value="${usuarioInstance?.nome}"/>
-            </div>
-        </div>
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'senha', 'error')} required">
+	<label for="senha">
+		<g:message code="usuario.senha.label" default="Senha" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="senha" required="" value="${usuarioInstance?.senha}"/>
+</div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="email">E-mail</label>
-            <div class="col-md-6">
-                <g:field type="email" name="email" placeholder="exemplo@email.com" class="form-control input-md" required="" value="${usuarioInstance?.email}"/>
-            </div>
-        </div>
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'permissao', 'error')} ">
+	<label for="permissao">
+		<g:message code="usuario.permissao.label" default="Permissao" />
+		
+	</label>
+	<g:textField name="permissao" value="${usuarioInstance?.permissao}"/>
+</div>
 
-        <!-- Password input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="senha">Senha</label>
-            <div class="col-md-6">
-                <g:textField type="password" name="senha" required="" placeholder="*****" class="form-control input-md" value="${usuarioInstance?.senha}"/>
+<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'reservas', 'error')} ">
+	<label for="reservas">
+		<g:message code="usuario.reservas.label" default="Reservas" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${usuarioInstance?.reservas?}" var="r">
+    <li><g:link controller="reserva" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="reserva" action="create" params="['usuario.id': usuarioInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'reserva.label', default: 'Reserva')])}</g:link>
+</li>
+</ul>
 
-            </div>
-        </div>
-    </fieldset>
-</form>
 </div>
 

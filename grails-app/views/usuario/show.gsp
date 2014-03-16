@@ -50,6 +50,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${usuarioInstance?.permissao}">
+				<li class="fieldcontain">
+					<span id="permissao-label" class="property-label"><g:message code="usuario.permissao.label" default="Permissao" /></span>
+					
+						<span class="property-value" aria-labelledby="permissao-label"><g:fieldValue bean="${usuarioInstance}" field="permissao"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${usuarioInstance?.reservas}">
 				<li class="fieldcontain">
 					<span id="reservas-label" class="property-label"><g:message code="usuario.reservas.label" default="Reservas" /></span>

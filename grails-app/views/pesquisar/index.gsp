@@ -21,26 +21,33 @@
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'bootstrap.js')}" type="text/javascript">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'jquery-1.10.2.js')}" type="text/javascript">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'modern-business.js')}" type="text/javascript">
+
     <meta name="layout" content="main"/>
     <g:javascript library="jquery" plugin="jquery" />
+
     <title>Pesquisar</title>
 
     <style>
-        #divExpandirSalao{
+        #divSalao{
+            width: 750px;
+            height: 550px;
             position: fixed;
             top: 200px;
             left: 200px;
             background-color: #ffffff;
             padding: 15px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            z-index: 2;
         }
     </style>
     <script type="text/javascript">
 
-        function abrirSalao(){
-            JQuery("#divExpandirSalao").fadeIn;
+        function abre(){
+            jQuery("#divSalao").fadeIn()
         }
-        function fecharSalao(){
-            JQuery("#divExpandirSalao").fadeOut;
+        function fecha(){
+            jQuery("#divSalao").fadeOut()
         }
     </script>
 
@@ -54,13 +61,13 @@
 
 
     </div>
-    <form class="form-inline" role="form">
+    
+    <g:formRemote method="post" name="formBuscar" url="[controller:'Pesquisar', action:'buscar']" update="divResultado">
         <div class="form-group col-sm-10">
             <input type="text" class="form-control" id="buscar" name=buscar placeholder="Salões, serviços ou endereços">
         </div>
         <button type="submit" class="btn btn-warning">Buscar</button>
-    </form>
-
+    </g:formRemote>
     </div>
 
     <div>
@@ -71,19 +78,30 @@
 
     <div id="divResultados">
 
+        <div id="divResultado">
+
+            <g:each in="${saloes}">
+
+
+
+            </g:each>
+
+        </div>
+
         <div id="divSaloes">
             
             Salões a serem exibidos
-            <a href="javascript: abrirSalao()">Dados do Salão</a>
+            <a href="javascript: abre()">Dados do Salão</a>
         </div>
-        <div id="divExpandirSalao">
-            
-            <g:formRemote name="form" url="[controller:'pesquisar',action:'search']">
+        <div id="divSalao">
 
-            </g:formRemote>
-            
-            Expandir os salões
-            <a href="javascript: fecharSalao()">Fechar</a>
+            <g:if test="${saloes != null}">
+
+                ocupado
+
+            </g:if>
+
+            <a href="javascript: fecha()">Fechar</a>
         </div>
 
     </div>
@@ -91,9 +109,7 @@
 </div>
 
 <script type="text/javascript">
-
-    fecharSalao();
-
+    fecha()
 </script>
 
 <!-- JavaScript -->

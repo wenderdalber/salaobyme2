@@ -41,6 +41,6 @@ class PesquisarController {
             }
 
         }
-        render(view: "buscar", model: [saloes:saloes])
+        render(view: "index", model: [saloes:saloes])
     }
 }

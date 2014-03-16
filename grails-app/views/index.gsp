@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <meta name="layout" content="main"/>
     <title>SalaoBy.Me - A beleza a um click de distância!</title>
 </head>
 <body style="background-image: url(/images/fundosalaobyme.png);">
+
 <div class="pesquisa">
     <div style="height: 50px">
 
@@ -19,6 +24,52 @@
 
 
 </div>
+
+<div class="container">
+
+    <hr>
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('images/01.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>Os melhores salões e serviços a um click de distância!</h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('images/buscarsalao.png');"></div>
+                <div class="carousel-caption">
+                    <h1>Maquiagens para festas, casamentos e demais eventos sociais!</h1>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/images/03.jpg');"></div>
+                <div class="carousel-caption">
+                    <h1>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+
+</div><!-- /.container -->
+
 <div class="section">
 
     <div class="container">
@@ -40,7 +91,6 @@
         </div><!-- /.row -->
 
     </div><!-- /.container -->
-
 
     <div class="container">
 
@@ -73,51 +123,6 @@
             <a class="btn btn-lg btn-primary pull-right" href="http://SalaoBy.Me">Salões</a>
         </div>
     </div><!-- /.row -->
-
-</div><!-- /.container -->
-
-<div class="container">
-
-    <hr>
-
-    <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('images/01.jpg');"></div>
-                <div class="carousel-caption">
-                    <h1>Os melhores salões e serviços a um click de distância!</h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('images/buscarsalao.png');"></div>
-                <div class="carousel-caption">
-                    <h1>Maquiagens para festas, casamentos e demais eventos sociais!</h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('images/03.jpg');"></div>
-                <div class="carousel-caption">
-                    <h1>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h1>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </div>
 
 </div><!-- /.container -->
 
