@@ -78,7 +78,7 @@ class SalaoController {
         }
 
         flash.message = message(code: 'default.updated.message', args: [message(code: 'salao.label', default: 'Salao'), salaoInstance.id])
-        redirect(action: "show", id: salaoInstance.id)
+        redirect(action: "meuSalao", id: salaoInstance.id)
     }
 
     def delete(Long id) {
@@ -98,5 +98,32 @@ class SalaoController {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'salao.label', default: 'Salao'), id])
             redirect(action: "show", id: id)
         }
+    }
+
+    def meuSalao(){
+
+        int Idproprietario = session.getAttribute("usuarioId")
+
+        Proprietario proprietario = Proprietario.findById(Idproprietario)
+        Salao salao = Salao.findByProprietario(proprietario)
+
+        render(view: "meuSalao", model: [salao:salao])
+
+    }
+
+    def meuServico(){
+
+        int Idproprietario = session.getAttribute("usuarioId")
+
+        Proprietario proprietario = Proprietario.findById(Idproprietario)
+        Salao salao = Salao.findByProprietario(proprietario)
+
+        Servico servico = Servico.findBySalao(salao)
+
+        Servico servico2 = Servico.createCriteria().list{
+
+        }
+
+        render(view: "meuServico", model: [servico:servico])
     }
 }

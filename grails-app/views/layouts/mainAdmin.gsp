@@ -120,9 +120,12 @@
                     <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class=""></i> Admin <span class="caret"></span></a>
                     <ul id="g-account-menu" class="dropdown-menu" role="menu">
                         <li><a href="#">Perfil</a></li>
+                        <g:form metho="post" controller="Usuario" action="Sair">
+                            <input type="submit" value="Sair" class="btn btn-danger">
+                        </g:form>
                     </ul>
                 </li>
-                <li><a href="#"><i class=""></i> Sair</a></li>
+
             </ul>
         </div>
     </div><!-- /container -->
@@ -183,11 +186,11 @@
         <hr>
 
         <div class="btn-group btn-group-justified">
-            <a href="SalaoByMe/Servico/Create" class="btn btn-primary col-sm-3">
+            <a href="../Servico/Create" class="btn btn-primary col-sm-3">
                 <i class="glyphicon glyphicon-plus"></i><br>
                 Criar Serviço
             </a>
-            <a href="#" class="btn btn-primary col-sm-3">
+            <a href="../Salao/meuSalao" class="btn btn-primary col-sm-3">
                 <i class="glyphicon glyphicon-cloud"></i><br>
                 Salão
             </a>
@@ -235,19 +238,23 @@
             $(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
         });
 
+        fecharMensagem(<%out.print(session.getAttribute("usuarioId"))%>);
+
     });
 
 </script>
 
     <script>
 
-        function fecharMensagem(){
-            jQuery("#divNaoLogado").fadeOut();
+        function fecharMensagem(id){
+debugger;
+            if(id != 0){
+                jQuery("#divNaoLogado").fadeOut();
+            }else{
+                jQuery("#divNaoLogado").fadeIn();
+            }
         }
 
-    </script>
-    <script>
-        fecharMensagem()
     </script>
 
 </body>

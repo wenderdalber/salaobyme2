@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-theme.min.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'modern-business.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'bootstrap.js')}" type="text/javascript">
-    <link rel="stylesheet" href="${resource(dir: 'js', file: 'jquery-1.10.2.js')}" type="text/javascript">
+    <script src="${resource(dir: 'js', file: 'jquery-1.11.0.js')}" ></script>
+    <script src="${resource(dir: 'js', file: 'jquery-1.11.0.min.js')}" ></script>
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'modern-business.js')}" type="text/javascript">
 
     <meta name="layout" content="main"/>
@@ -49,6 +50,9 @@
         function fecha(){
             jQuery("#divSalao").fadeOut()
         }
+        function listarSaloes(){
+            ${remoteFunction(controller: 'Pesquisar', action: 'buscar', update: 'divSalao')}
+        }
     </script>
 
 
@@ -64,11 +68,13 @@
     
     <g:formRemote method="post" name="formBuscar" url="[controller:'Pesquisar', action:'buscar']" update="divResultado">
         <div class="form-group col-sm-10">
-            <input type="text" class="form-control" id="buscar" name=buscar placeholder="Salões, serviços ou endereços">
+            <input type="text" class="form-control" id="palavra" name="palavra" placeholder="Salões, serviços ou endereços">
         </div>
         <button type="submit" class="btn btn-warning">Buscar</button>
     </g:formRemote>
     </div>
+
+</div>
 
     <div>
 
@@ -78,15 +84,6 @@
 
     <div id="divResultados">
 
-        <div id="divResultado">
-
-            <g:each in="${saloes}">
-
-
-
-            </g:each>
-
-        </div>
 
         <div id="divSaloes">
             
@@ -94,12 +91,6 @@
             <a href="javascript: abre()">Dados do Salão</a>
         </div>
         <div id="divSalao">
-
-            <g:if test="${saloes != null}">
-
-                ocupado
-
-            </g:if>
 
             <a href="javascript: fecha()">Fechar</a>
         </div>
@@ -110,6 +101,7 @@
 
 <script type="text/javascript">
     fecha()
+    listarSaloes()
 </script>
 
 <!-- JavaScript -->

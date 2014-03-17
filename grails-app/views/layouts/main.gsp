@@ -65,7 +65,7 @@
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <g:form class="form" role="form" method="post" controller="Usuario" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <g:form class="form" role="form" method="post" controller="Usuario" action="login" accept-charset="UTF-8">
                                                 <div class="form-group">
                                                     <label class="sr-only" for="exampleInputEmail2">E-mail</label>
                                                     <input type="email" class="form-control" id="email" name="email" placeholder="e-mail" required>
@@ -161,7 +161,7 @@
      function verificaSession(id){
          debugger;
          var undefined = "erro";
-         if(id === 0){
+         if(id != 0){
              //if(undefined === "erro"){
                  jQuery("#menu").fadeIn()
                  jQuery("#menu2").fadeOut()

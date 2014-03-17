@@ -1,6 +1,9 @@
 package salaobyme
 
+import com.sun.xml.internal.org.jvnet.mimepull.MIMEMessage
+import org.apache.tomcat.jni.Address
 import org.springframework.dao.DataIntegrityViolationException
+import org.springframework.mail.javamail.InternetAddressEditor
 
 class UsuarioController {
 
@@ -106,30 +109,73 @@ class UsuarioController {
 
     def login(){
 
-        String email = params.txtEmail
-        String senha = params.txtSenha
+        String email = params.email
+        String senha = params.senha
 
         Usuario usuario = Usuario.findByEmailAndSenha(email, senha)
+
         if(usuario != null){
 
             if(usuario.permissao == "Admin"){
                 session.setAttribute("usuarioId", usuario.id)
                 session.setAttribute("usuarioNome", usuario.nome)
                 flash.message = "Logou"
-                redirect(uri: "Admin")
-            }else{
-                session.setAttribute("usuarioId", usuario.id)
-                session.setAttribute("usuarioNome", usuario.nome)
-                flash.message = "Logou"
-                redirect(uri: "/")
+                //redirect(uri: "")
+                render(view: "Admin")
+            }
+
+
+        }else{
+            flash.message = "Usuario e/ou senha incorretos"
+            redirect(uri: "/")
+        }
+    }
+
+    def meuPerfil(){
+
+        int idProprietario = session.getAttribute("usuarioId")
+
+        Proprietario proprietario = Proprietario.findById(idProprietario)
+
+        render(view: "meuPerfil", model: [proprietario:proprietario])
+
+    }
+
+    def Sair(){
+        session.removeAttribute("usuarioId")
+        session.removeAttribute("usuarioNome")
+        session.invalidate()
+        redirect(uri: "/")
+    }
+
+    def esqueceuSenha(){
+
+        String email = params.email
+
+        Usuario usuario = Usuario.findByEmail(email)
+
+        if(usuario != null){
+
+            Random ram = new Random()
+            int novaSenha = ram.nextInt(100000) + 10
+
+            /*EnviarEmail(email.value, novaSenha.value.toString())*/
+            usuario.senha=novaSenha.value
+
+            sendMail {
+                to email
+                from "naoresponda@salaoby.me"
+                subject "Recuperar senha - SalaoBy.Me"
+                body 'Você fez um pedido para recuperar sua senha! Sua nova senha: ' + novaSenha
+            }
+
+            if(usuario.save(flush:true)){
+                flash.message = "Nova senha enviada para o e-mail: " + email
             }
 
         }else{
-            flash.message("Usuário ou senha Incorretos")
+            flash.message="E-mail não cadastro no sistema"
+            //redirect(uri: "esqueceuSenha")
         }
-    }
-    def Sair(){
-        session.invalidate();
-        redirect(rui: "/")
     }
 }
