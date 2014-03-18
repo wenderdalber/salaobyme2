@@ -4,9 +4,32 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <meta name="layout" content="main"/>
     <title>SalaoBy.Me - A beleza a um click de distância!</title>
+
+    <style type="text/css">
+    h3{
+        margin: 0;
+        color: #666;
+        padding-top: 90px;
+        font-size: 52px;
+        font-family: "trebuchet ms", sans-serif;
+        color: #000000;
+    }
+    .item{
+        background: #333;
+        text-align: center;
+        height: 300px !important;
+        color: #000000;
+    }
+    .carousel{
+        margin-top: 20px;
+        color: #000000;
+    }
+    .bs-example{
+        margin: 20px;
+    }
+    </style>
 </head>
 <body style="background-image: url(/images/fundosalaobyme.png);">
 
@@ -21,44 +44,46 @@
         </div>
         <button type="submit" class="btn btn-warning">Buscar</button>
     </form>
-
-
 </div>
-
 <div class="container">
 
     <hr>
 
-    <div id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-
-        <!-- Wrapper for slides -->
+        <!-- Carousel items -->
         <div class="carousel-inner">
-            <div class="item active">
+            <div class="active item">
                 <div class="fill" style="background-image:url('images/01.jpg');"></div>
+                <h2>Os melhores salões e serviços a um click de distância!</h2>
                 <div class="carousel-caption">
-                    <h1>Os melhores salões e serviços a um click de distância!</h1>
+                    <h3>Os melhores salões e serviços a um click de distância!</h3>
+                    <p></p>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('images/buscarsalao.png');"></div>
+                <div class="fill" style="background-image:url('images/02.jpg');"></div>
+                <h2>Slide 2</h2>
                 <div class="carousel-caption">
-                    <h1>Maquiagens para festas, casamentos e demais eventos sociais!</h1>
+                    <h3>Maquiagens para festas, casamentos e demais eventos sociais!</h3>
+                    <p></p>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('/images/03.jpg');"></div>
+                <div class="fill" style="background-image:url('images/03.jpg');"></div>
+                <h2>Slide 3</h2>
                 <div class="carousel-caption">
-                    <h1>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h1>
+                    <h3>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h3>
+                    <p></p>
                 </div>
             </div>
         </div>
-
+        <!-- Carousel nav -->
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="icon-prev"></span>
@@ -67,6 +92,7 @@
             <span class="icon-next"></span>
         </a>
     </div>
+
 
 </div><!-- /.container -->
 

@@ -1,9 +1,14 @@
 package salaobyme
 
-import com.sun.xml.internal.org.jvnet.mimepull.MIMEMessage
-import org.apache.tomcat.jni.Address
-import org.springframework.dao.DataIntegrityViolationException
-import org.springframework.mail.javamail.InternetAddressEditor
+import java.util.Properties;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 class UsuarioController {
 
@@ -96,15 +101,15 @@ class UsuarioController {
             return
         }
 
-        try {
+       /* try {*/
             usuarioInstance.delete(flush: true)
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
             redirect(action: "list")
-        }
+/*        }
         catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
             redirect(action: "show", id: id)
-        }
+        }*/
     }
 
     def login(){
@@ -148,6 +153,47 @@ class UsuarioController {
         redirect(uri: "/")
     }
 
+    public void EnviarEmail(String email, String novaSenha) {
+        Properties props = new Properties();
+        /** Parâmetros de conexão com servidor Gmail */
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.socketFactory.port", "465");
+        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.port", "465");
+
+        Session session = Session.getDefaultInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication()
+                    {
+                        return new PasswordAuthentication("wenderfatec@gmail.com", "yroehtESUOH11");
+                    }
+                });
+
+        /** Ativa Debug para sessão */
+        session.setDebug(true);
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("naoresponda@salaoby.me")); //Remetente
+
+            Address[] toUser = InternetAddress //Destinatário(s)
+                    .parse(email);
+
+            message.setRecipients(Message.RecipientType.TO, toUser);
+            message.setSubject("Recuperacao de Senha - SalaoBy.Me");//Assunto
+            message.setText("Sua nova senha é: " + novaSenha);
+            /**Método para enviar a mensagem criada*/
+            Transport.send(message);
+
+            System.out.println("Feito!!!");
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     def esqueceuSenha(){
 
         String email = params.email
@@ -159,20 +205,15 @@ class UsuarioController {
             Random ram = new Random()
             int novaSenha = ram.nextInt(100000) + 10
 
-            /*EnviarEmail(email.value, novaSenha.value.toString())*/
+            EnviarEmail(email.value.toString(), novaSenha.value.toString())
             usuario.senha=novaSenha.value
 
-            sendMail {
-                to email
-                from "naoresponda@salaoby.me"
-                subject "Recuperar senha - SalaoBy.Me"
-                body 'Você fez um pedido para recuperar sua senha! Sua nova senha: ' + novaSenha
+            if(usuario.save(flush: true)){
+                flash.message="E-mail enviado com sucesso!"
+                render(view: "esqueceuSenha")
+            }else{
+                flash.message="Ocorreu um erro, tente novamente!"
             }
-
-            if(usuario.save(flush:true)){
-                flash.message = "Nova senha enviada para o e-mail: " + email
-            }
-
         }else{
             flash.message="E-mail não cadastro no sistema"
             //redirect(uri: "esqueceuSenha")

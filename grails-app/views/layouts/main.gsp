@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-theme.min.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'modern-business.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'js', file: 'bootstrap.js')}" type="text/javascript">
+    <link rel="stylesheet" href="${resource(dir: 'js', file: 'modern-business.js')}" type="text/javascript">
     <script src="${resource(dir: 'js', file: 'jquery-1.11.0.js')}" ></script>
     <script src="${resource(dir: 'js', file: 'jquery-1.11.0.min.js')}" ></script>
-    <script src="${resource(dir: 'js', file: 'modern-business.js')}"></script>
     <g:layoutHead/>
 </head>
 <body>
@@ -89,7 +89,7 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <input class="btn btn-danger btn-block" type="button" id="sign-in-google" value="Esqueci minha senha">
+                                    <strong><a href="Usuario/EsqueceuSenha" class="btn">Esqueci minha senha</a></strong>
                                 </li>
                             </ul>
                         </li>
