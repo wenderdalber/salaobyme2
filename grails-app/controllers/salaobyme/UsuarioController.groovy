@@ -9,6 +9,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import salaobyme.PasswordCodec;
 
 class UsuarioController {
 
@@ -33,6 +34,9 @@ class UsuarioController {
 
     def save() {
         def usuarioInstance = new Usuario(params)
+        usuarioInstance.senha =  params.senha.encodeAsPassword()
+        usuarioInstance.permissao = "Usuario"
+
         if (!usuarioInstance.save(flush: true)) {
             render(view: "create", model: [usuarioInstance: usuarioInstance])
             return
@@ -115,7 +119,7 @@ class UsuarioController {
     def login(){
 
         String email = params.email
-        String senha = params.senha
+        String senha =  params.senha
 
         Usuario usuario = Usuario.findByEmailAndSenha(email, senha)
 
@@ -124,9 +128,16 @@ class UsuarioController {
             if(usuario.permissao == "Admin"){
                 session.setAttribute("usuarioId", usuario.id)
                 session.setAttribute("usuarioNome", usuario.nome)
+                session.setAttribute("usuarioPermissao", usuario.permissao)
                 flash.message = "Logou"
                 //redirect(uri: "")
                 render(view: "Admin")
+            }else{
+                session.setAttribute("usuarioId", usuario.id)
+                session.setAttribute("usuarioNome", usuario.nome)
+                flash.message = "Logou"
+                //redirect(uri: "")
+                redirect(uri: "/")
             }
 
 

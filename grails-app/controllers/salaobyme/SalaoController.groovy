@@ -2,6 +2,14 @@ package salaobyme
 
 import org.springframework.dao.DataIntegrityViolationException
 
+import javax.mail.Address
+import javax.mail.Message
+import javax.mail.MessagingException
+import javax.mail.Session
+import javax.mail.Transport
+import javax.mail.internet.InternetAddress
+import javax.mail.internet.MimeMessage
+
 class SalaoController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -125,5 +133,73 @@ class SalaoController {
         }
 
         render(view: "meuServico", model: [servico:servico])
+    }
+
+    def Sobre(){
+
+    }
+
+    public void EnviarEmail() {
+        Properties props = new Properties();
+        /** Parâmetros de conexão com servidor Gmail */
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.socketFactory.port", "465");
+        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.port", "465");
+
+        Session session = Session.getDefaultInstance(props,
+                new javax.mail.Authenticator() {
+                    protected javax.mail.PasswordAuthentication getPasswordAuthentication()
+                    {
+                        return new javax.mail.PasswordAuthentication("wenderfatec@gmail.com", "yroehtESUOH11");
+                    }
+                });
+
+        /** Ativa Debug para sessão */
+        session.setDebug(true);
+
+        try {
+
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("contato@salaoby.me")); //Remetente
+
+            Address[] toUser = InternetAddress //Destinatário(s)
+                    .parse(email);
+
+            message.setRecipients(Message.RecipientType.TO, toUser);
+            message.setSubject("Contato - SalaoBy.Me");//Assunto
+            message.setText("Sua nova senha é: " + novaSenha);
+            /**Método para enviar a mensagem criada*/
+            Transport.send(message);
+
+            System.out.println("Feito!!!");
+
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    def faleConosco(){
+
+        String nome = params.nome
+        String email = params.email
+        String telefone = params.telefone
+        String mensagem = params.mensagem
+
+        if(EnviarEmail()){
+            flash.message="E-mail enviado com sucesso! Em breve retornaremos o contato"
+        }else{
+            flash.message="Erro! Verifique o e-mail digitado e tente novamente!"
+        }
+
+    }
+
+    def estab(Long id){
+
+        Salao salao = Salao.get(id)
+
+
+        render(view: "estab", model: [salao:salao])
     }
 }

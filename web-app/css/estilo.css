@@ -128,9 +128,9 @@ body
 }
 
 .pegaTudo{
-    width: 200%;
+    width: 100%;
     height: auto;
-    background-color: #ffffff;
+    background-color: #e4e0e0;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-box-shadow:    3px 3px 5px 6px;

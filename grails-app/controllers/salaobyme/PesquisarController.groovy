@@ -10,9 +10,7 @@ class PesquisarController {
         def dayOfMonth = date.getAt(Calendar.DAY_OF_WEEK)
     }
 
-    def buscar(String buscar) {
-
-        palavra = buscar
+    def buscar(String pesquisar) {
 
         def arrayPalavras = params.pesquisar.split(" ")
         def pesquisa = arrayPalavras.collect{palavra ->
@@ -44,6 +42,14 @@ class PesquisarController {
             }
 
         }
-        render(view: "/pesquisar/listaSaloes.gsp", model: [saloes:saloes])
+        render(view: "index", model: [saloes:saloes])
+    }
+
+    def buscarServicos(int id){
+
+        def salao = Salao.findById(id)
+
+        render(view: "/pesquisar/listaSaloes.gsp", model: [salao:salao])
+
     }
 }

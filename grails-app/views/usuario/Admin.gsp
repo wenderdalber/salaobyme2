@@ -14,6 +14,7 @@
 
 <body>
 
+<% if(session.getValue("usuarioPermissao") != null){ %>
 <div class="panel panel-default">
     <div class="panel-heading"><h4>Próximas Reservas</h4></div>
     <div class="panel-body">
@@ -202,6 +203,9 @@
 </div>
 </div>
 <!-- /Main -->
+<%}else{%>
+<h1></h1>
+<%}%>
 
 
 </body>

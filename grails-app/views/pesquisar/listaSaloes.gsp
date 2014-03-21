@@ -1,7 +1,7 @@
-<g:if test="${saloes.size() > 0}">
+<g:if test="${salao != null}">
 
-    <g:each in="${saloes}" var="salao">
-
+    <g:each in="${salao}" var="salao">
+        <a href="javascript: fecha()">Fechar</a>
         ${salao.nome}
         ${salao.cnpj}
 
@@ -10,7 +10,7 @@
 
 </g:if>
 <g:else>
-
+    <a href="javascript: fecha()">Fechar</a>
     Nenhum resultado encontrado!
 
 </g:else>

@@ -104,6 +104,8 @@
 
 <body  >
 
+
+<% if(session.getValue("usuarioPermissao") != null){ %>
 <!-- Header -->
 <div id="top-nav" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -166,13 +168,6 @@
 <div class="col-md-9">
 
 
-    <div id="divNaoLogado" class="userLogado">
-
-        <h1>Você não está logado!</h1>
-
-    </div>
-
-
 <hr>
 
 <div class="row">
@@ -203,7 +198,9 @@
                 Ajuda
             </a>
         </div>
-
+    <%}else{%>
+    <h1>Você não tem permissão para ver essa página!</h1>
+    <%}%>
         <hr>
     <g:layoutBody/>
 

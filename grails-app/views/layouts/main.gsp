@@ -27,15 +27,7 @@
 </head>
 <body>
 
-<%
-    //Verifica se está logado
-    if(session.getValue("usuarioId") != null){
-        out.println("Você está logado com sucesso no sistema, por isso consegue ver está pagina. Seu login é: " + session.getValue("usuarioNome") + " e sua senha: " + session.getValue("usuario") + ". Clique <a href='logoff.jsp'>aqui</a> para sair do sistema");
-    } else {
-        out.println("Você não está logado no sistema. Clique <a href='index.html'>aqui</a> para logar-se");
-    }
-%>
-
+<% if(session.getValue("usuarioId") == null){ %>
 <div class="container">
     <div class="row">
         <div id="menu" class="col-md-12">
@@ -94,10 +86,12 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
         </div><!-- /.navbar-collapse -->
     </nav>
-        <div class="container">
+  </div>
+</div>
+   <%}else{%>
+      <div class="container">
             <div class="row">
         <div id="menu2" class="col-md-12">
             <nav class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
@@ -140,7 +134,9 @@
                 </div>
         </div><!-- /.navbar-collapse -->
     </nav>
-
+  </div>
+  </div>
+                <% }%>
     <script>
         $(document).ready(function(){
             //Handles menu drop down
@@ -148,8 +144,8 @@
                 e.stopPropagation();
             });
 
-            debugger;
-            verificaSession(<%out.print(session.getAttribute("usuarioId"))%>)
+            /*debugger;
+            verificaSession()*/
 
         });
 
@@ -192,16 +188,38 @@
     </div>
 <g:layoutBody/>
 </div>
-<div class="footer" role="contentinfo">
+<div style="width: 100%; background-color: #ffffff">
+<div class="footer" role="contentinfo" style="background-color: #ffffff; width: 70%; padding: 0 0 0 150px">
     <footer>
-        <div class="row">
+        <div style="width: 30%; float:left">
             <div class="col-lg-12">
-                <center><p><a href="http://salaoby.me"> SalaoBy.Me </a> &copy; 2014
-                        <g:if test="${flash.message}"></g:if>
-                </p></center>
+                <ul>
+                    <li>Quem somos</li>
+                    <li>Informações úteis - Cliente</li>
+                    <li>Informações úteis - Salão</li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 10%"></div>
+        <div style="width: 30%;float:left">
+            <div class="col-lg-12">
+                <ul>
+                    <li>Cadastre seu salão</li>
+                    <li>Seja um revendendor</li>
+                    <li>Fale conosco</li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 10%"></div>
+        <div style="width: 30%; float:left">
+            <div class="col-lg-12">
+                <span> <a href="https://www.facebook.com/salaobyme"><img src="images/face.jpg" /> Facebook </a></span><br>
+                <span> <a href="http://twitter.com/SalaoByMe"> <img src=images/twitter.jpg>  Twitter </a></span><br>
+                <span> <a href="http://www.pinterest.com/salaobyme/"> <img src=images/pinte.jpg>  Pinterest</a> </span>
             </div>
         </div>
     </footer>
+</div>
 </div>
 <div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 <g:javascript library="application"/>

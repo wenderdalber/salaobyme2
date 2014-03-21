@@ -29,21 +29,34 @@
     .bs-example{
         margin: 20px;
     }
+
+    .divPrincipal{
+        width: 370px;
+        height: 300px;
+        background-color: #ffffff;
+        float:left;
+    }
+        .divEspaco{
+            width: 30px;
+            height: 300px;
+            float:left;
+        }
     </style>
 </head>
 <body style="background-image: url(/images/fundosalaobyme.png);">
 
 <div class="pesquisa">
     <div style="height: 50px">
+        <g:form class="form-inline" method="GET" action="buscar" controller="Pesquisar">
 
+            <div class="form-group col-sm-10">
+                <input type="text" class="form-control" id="pesquisar" name="pesquisar" placeholder="Salões, serviços ou endereços">
+            </div>
+            <button type="submit" class="btn btn-warning">Buscar</button>
+
+        </g:form>
     </div>
 
-    <form class="form-inline" role="form">
-        <div class="form-group col-sm-10">
-            <input type="text" class="form-control" id="buscar" name=buscar placeholder="Salões, serviços ou endereços">
-        </div>
-        <button type="submit" class="btn btn-warning">Buscar</button>
-    </form>
 </div>
 <div class="container">
 
@@ -120,17 +133,19 @@
 
     <div class="container">
 
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-check-circle"></i> Destaque do mes 1</h3>
-                <p>Um moderno salão pronto para oferecer os melhores serviços! Acesse <a href="http://8080/salaobyme">Salaobyme</a></div>
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-pencil"></i> Destaque do mês 2</h3>
-                <p>Os melhores serviços prontos para o seu bom gosto!</a>!</p>
+        <div class="row" >
+            <div class="col-lg-4 col-md-4 divPrincipal">
+                <h3><i class="fa fa-check-circle"></i> Luz Cabelos</h3>
+                <p>Localizado no centro da cidade, um salão moderno e preparado para atender com qualidade! Mais de 10 anos de qualidade aprovada! Acesse a pagina do salão <a href="/Salao/LuzCabelos"> Luz Cabelos</a></div>
+            <div class="divEspaco"></div>
+            <div class="col-lg-4 col-md-4 divPrincipal">
+                <h3><i class="fa fa-pencil"></i> Clínica de Estética ARN</h3>
+                <p>Premoções imperdíveis no nosso mês de aniversário! Venha conhecer nossos pacotes promocionais! Acesse a página de <a href="/Salao/ARN"> ARN</a>!</p>
             </div>
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-folder-open"></i> Destaque do Mes 3</h3>
-                <p>Serviços</p>
+            <div class="divEspaco"></div>
+            <div class="col-lg-4 col-md-4 divPrincipal">
+                <h3><i class="fa fa-folder-open"></i> Dona Almeida</h3>
+                <p>Venha conferrir nossos pacotes para noivas! Promoções imperdiveis! Acesse a página de <a href="/Salao/DonaAlmeida">Dona Almeida</a></p>
             </div>
         </div><!-- /.row -->
 

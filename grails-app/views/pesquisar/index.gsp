@@ -41,17 +41,51 @@
             -webkit-border-radius: 5px;
             z-index: 2;
         }
+
+        .espaco{
+            width: 100%;
+            height: 10px;
+        }
+
+        #divSaloes{
+            width: 100%;
+            height: auto;
+            background-color: #e4e0e0;
+        }
+
+        .img{
+            width: 50%;
+            height: 50%;
+        }
+
+        .divImg{
+            width: 20%;
+            height: auto;
+            float: left;
+        }
+        .divS{
+            width: 70%;
+            height: auto;
+            float: left;
+        }
+        .espacoImg{
+            width: 10%;
+            height: auto;
+            float:left;
+        }
     </style>
+
     <script type="text/javascript">
 
-        function abre(){
+        function abre(id){
             jQuery("#divSalao").fadeIn()
+                ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params: ['id=' + id])}
         }
         function fecha(){
             jQuery("#divSalao").fadeOut()
         }
-        function listarSaloes(){
-            ${remoteFunction(controller: 'Pesquisar', action: 'buscar', update: 'divSalao')}
+        function listarServicos(){
+            ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao')}
         }
     </script>
 
@@ -65,38 +99,63 @@
 
 
     </div>
-    
-    <g:formRemote method="post" name="formBuscar" url="[controller:'Pesquisar', action:'buscar']" update="divResultado">
+
+    <g:form method="GET" action="buscar">
+
         <div class="form-group col-sm-10">
-            <input type="text" class="form-control" id="palavra" name="palavra" placeholder="Salões, serviços ou endereços">
+            <input type="text" class="form-control" id="pesquisar" name="pesquisar" placeholder="Salões, serviços ou endereços">
         </div>
         <button type="submit" class="btn btn-warning">Buscar</button>
-    </g:formRemote>
+
+    </g:form>
     </div>
 
 </div>
 
-    <div>
+    <div class="container" style="background-color: beige">
 
-        <h2>Resultado da Pesquisa:</h2>
+        <center><h2>Resultado da Pesquisa para: <strong>${params.pesquisar}</strong></h2></center>
 
-    </div>
+
+
 
     <div id="divResultados">
 
 
         <div id="divSaloes">
-            
-            Salões a serem exibidos
-            <a href="javascript: abre()">Dados do Salão</a>
+
+        <g:if test="${saloes != null}">
+            <g:each in="${saloes}" var="salao">
+                <div class="divImg"><img src="../images/01.jpg" class="img" /></div>
+                <div class="espacoImg"></div>
+                <div class="divS"><h2><label>Salão: ${salao.nome} </label></h2>
+                <strong>Endereço: </strong> ${salao.endereco.logradouro}<br>
+                <strong>Bairro: </strong>${salao.endereco.bairro} <br>
+                <strong>Cidade: </strong>${salao.endereco.cidade} <strong>Estado: </strong>${salao.endereco.estado} <strong>CEP: </strong>${salao.endereco.cep}
+                <input type="text" id="id" value="${salao.id}" hidden="hidden"><br>
+                <a href="javascript: abre(${salao.id})"><strong>Servicos do Salão</strong></a></div>
+            </g:each>
+        </g:if>
+        <g:else>
+            <h2>Sem resultados...</h2>
+        </g:else>
         </div>
+        <div class="espaco"></div>
+
         <div id="divSalao">
 
             <a href="javascript: fecha()">Fechar</a>
+
+            <g:each in="${saloes}">
+
+
+
+            </g:each>
+
         </div>
 
     </div>
-
+    </div>
 </div>
 
 <script type="text/javascript">
