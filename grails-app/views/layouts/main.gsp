@@ -194,33 +194,7 @@
 <div style="width: 100%; background-color: #ffffff">
 <div class="footer" role="contentinfo" style="background-color: #ffffff; width: 70%; padding: 0 0 0 150px">
     <footer>
-        <div style="width: 30%; float:left">
-            <div class="col-lg-12">
-                <ul>
-                    <li>Quem somos</li>
-                    <li>Informações úteis - Cliente</li>
-                    <li>Informações úteis - Salão</li>
-                </ul>
-            </div>
-        </div>
-        <div style="width: 10%"></div>
-        <div style="width: 30%;float:left">
-            <div class="col-lg-12">
-                <ul>
-                    <li>Cadastre seu salão</li>
-                    <li>Seja um revendendor</li>
-                    <li>Fale conosco</li>
-                </ul>
-            </div>
-        </div>
-        <div style="width: 10%"></div>
-        <div style="width: 30%; float:left">
-            <div class="col-lg-12">
-                <span> <a href="https://www.facebook.com/salaobyme"><img src="${createLink(uri: '/images/face.jpg')}" /> Facebook </a></span><br>
-                <span> <a href="http://twitter.com/SalaoByMe"> <img src=${createLink(uri: '/images/twitter.jpg')}>  Twitter </a></span><br>
-                <span> <a href="http://www.pinterest.com/salaobyme/"> <img src=${createLink(uri: '/images/pinte.jpg')}>  Pinterest</a> </span>
-            </div>
-        </div>
+
     </footer>
 </div>
 </div>

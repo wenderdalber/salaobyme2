@@ -4,12 +4,13 @@ body{
 	height: 100%;
     /*background-image:url(../images/item2.png);*/
     background-image:url(../images/fundo2.png);
+    background-size:100%;
 }
 
 .pesquisa{
-	margin: 0 auto;
+    margin-top:200px;
+    margin-left:300px;
 	width: 50%;
-	height: 30%;
     /*background-image:url(../images/fundosalaobyme.png);*/
 }
 
@@ -29,6 +30,21 @@ body{
     width: 50%;
     height: 100%;
 }
+.destaque{
+    padding: 15px;
+    float:left;
+    height: 400px;
+    width:350px;
+    max-width:350px;
+    background-color:#fff;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 200px;
+}
+ .destaque img{
+     width: 320px;
+     height: 230px;
+ }
 
 /*CSS perfil do usuário*/
 
