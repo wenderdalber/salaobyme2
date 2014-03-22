@@ -1,7 +1,5 @@
 package salaobyme
 
-import java.security.MessageDigest
-import java.util.Properties;
 import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -9,9 +7,10 @@ import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
-import salaobyme.PasswordCodec;
+import javax.mail.internet.MimeMessage
+import java.security.MessageDigest
+import sun.misc.BASE64Encoder;
+import java.security.NoSuchAlgorithmException;
 
 class UsuarioController {
 
@@ -36,6 +35,7 @@ class UsuarioController {
 
     def save() {
         def usuarioInstance = new Usuario(params)
+        usuarioInstance.senha = md5(params.senha)
         usuarioInstance.permissao = "Usuario"
 
         if (!usuarioInstance.save(flush: true)) {
@@ -120,7 +120,7 @@ class UsuarioController {
     def login(){
 
         String email = params.email
-        String senha =  params.senha
+        String senha =  md5(params.senha)
 
         Usuario usuario = Usuario.findByEmailAndSenha(email, senha)
 
@@ -155,14 +155,14 @@ class UsuarioController {
 
         Proprietario proprietario = Proprietario.findById(idProprietario)
 
-        render(view: "meuPerfil", model: [proprietario:proprietario])
+        render(view: "meu_Perfil", model: [proprietario:proprietario])
         }else{
          int idUsuario = session.getAttribute("usuarioId")
 
          Usuario usuario = Usuario.findById(idUsuario)
          Reserva reserva = Reserva.findByUsuario(usuario)
 
-                render(view: "meuPerfil", model: [usuario:usuario, reserva:reserva])
+                render(view: "meu_Perfil", model: [usuario:usuario, reserva:reserva])
         }
     }
 
@@ -171,6 +171,20 @@ class UsuarioController {
         session.removeAttribute("usuarioNome")
         session.invalidate()
         redirect(uri: "/")
+    }
+
+
+    public static String md5(String senha){
+        String sen = "";
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("MD5");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        BigInteger hash = new BigInteger(1, md.digest(senha.getBytes()));
+        sen = hash.toString(16);
+        return sen;
     }
 
 
@@ -215,7 +229,7 @@ class UsuarioController {
         }
     }
 
-    def esqueceuSenha(){
+    def esqueceu_Senha(){
 
         String email = params.email
 
@@ -231,7 +245,7 @@ class UsuarioController {
 
             if(usuario.save(flush: true)){
                 flash.message="E-mail enviado com sucesso!"
-                render(view: "esqueceuSenha")
+                render(view: "esqueceu_Senha")
             }else{
                 flash.message="Ocorreu um erro, tente novamente!"
             }

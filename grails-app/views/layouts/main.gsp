@@ -11,6 +11,10 @@
     <input type="hidden" value="localhost:8080/SalaoByMe/" id="url" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="Salões de beleza,agendar estética,agendar SPA,salões em Aparecida,salões em São Paulo,corte de cabelo,progressiva,manicure,massagem,depilação,maquiagem">
+    <meta name="description" content="O SalaoByMe é um sistema de agendamento online para serviços de beleza. Aqui você pode encontrar e agendar os melhores salões de beleza, clínicas de estética e SPAs.">
+    <meta name="author" content="SalaoBy.me - Agendamento Online">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <g:javascript library="jquery" plugin="jquery" />
     <title><g:layoutTitle default="Grails"/></title>
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">

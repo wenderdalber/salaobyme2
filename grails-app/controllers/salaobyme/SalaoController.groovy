@@ -29,6 +29,12 @@ class SalaoController {
 
     def save() {
         def salaoInstance = new Salao(params)
+
+        int idProprietario = session.getAttribute("usuarioId")
+        Proprietario proprietario = Proprietario.findByid(idProprietario)
+
+        salaoInstance.proprietario = proprietario
+
         if (!salaoInstance.save(flush: true)) {
             render(view: "create", model: [salaoInstance: salaoInstance])
             return
@@ -115,7 +121,7 @@ class SalaoController {
         Proprietario proprietario = Proprietario.findById(Idproprietario)
         Salao salao = Salao.findByProprietario(proprietario)
 
-        render(view: "meuSalao", model: [salao:salao])
+        render(view: "meu_Salao", model: [salao:salao])
 
     }
 
@@ -199,7 +205,7 @@ class SalaoController {
 
         Salao salao = Salao.get(id)
 
-        def listaServico =  salao.servicos
+        def lista =  salao.servicos
 
         render(view: "estab", model: [salao:salao, lista:lista])
     }

@@ -15,7 +15,7 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost/salaobyme"
             username = "root"
-            password = ""
+            password = "root"
         }
         hibernate {
             show_sql = true
@@ -26,7 +26,7 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost/salaobyme"
             username = "root"
-            password = ""
+            password = "root"
         }
     }
     production {
@@ -34,7 +34,7 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/salaobyme"
             username = "root"
-            password = ""
+            password = "root"
         }
     }
 }

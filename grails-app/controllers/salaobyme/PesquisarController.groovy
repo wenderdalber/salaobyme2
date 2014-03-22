@@ -19,9 +19,10 @@ class PesquisarController {
             (palavra.length() > 3)? palavra : null
         }
 
-        def saloes = Salao.createCriteria().list{
+        def saloes = Salao.createCriteria().listDistinct{
             createAlias("servicos","servico")
             createAlias("servico.categoria","categoria")
+            createAlias("endereco", "endereco")
 
             or{
                 pesquisa.each { palavra ->
@@ -30,12 +31,11 @@ class PesquisarController {
                         ilike("servico.descricao","%${palavra}%")
                         ilike("categoria.nome","%${palavra}%")
 
-                        endereco{
-                            ilike("logradouro","%${palavra}%")
-                            ilike("bairro","%${palavra}%")
-                            ilike("cidade","%${palavra}%")
-                            ilike("estado","%${palavra}%")
-                        }
+                        ilike("endereco.logradouro","%${palavra}%")
+                        ilike("endereco.bairro","%${palavra}%")
+                        ilike("endereco.cidade","%${palavra}%")
+                        ilike("endereco.estado","%${palavra}%")
+
                     }
                 }
 
@@ -45,17 +45,21 @@ class PesquisarController {
         render(view: "index", model: [saloes:saloes])
     }
 
-    def buscarServicos(int id){
+    def buscarServicos(Long id){
 
         def salao = Salao.findById(id)
 
-        redirect(action: 'listandoServico', params:[id:salao.id])
+        def lista = salao
+        //redirect(action: 'listandoServico', params:[id:salao.id])
+        render(view: "/pesquisar/listaSaloes.gsp", model:[lista:lista])
     }
 
-    def listandoServico(){
+    def listandoServico(int id){
+
+        def salao = Salao.findById(id)
 
         def lista = Salao.createCriteria().list {
-            servicos{
+            salao.servicos{
             }
         }
 

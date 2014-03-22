@@ -4,6 +4,7 @@ class Salao {
 
     String nome
     String cnpj
+    String descricao
     Endereco endereco
     Proprietario proprietario
 
@@ -14,6 +15,7 @@ class Salao {
         nome nullable:false, blank:false
         cnpj nullable:false, blank:false
         endereco nullable:true
+        descricao nullable:true
     }
 
     String toString() {
