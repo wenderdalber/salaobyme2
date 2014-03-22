@@ -85,28 +85,10 @@
       <file leaf-file-name="UsuarioController.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="41" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.6819484" vertical-offset="1836" max-vertical-offset="4471">
+            <state line="189" column="0" selection-start="6267" selection-end="6267" vertical-scroll-proportion="0.9512894" vertical-offset="2881" max-vertical-offset="4471">
               <folding>
                 <element signature="e#19#44#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainPrincipal.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/mainPrincipal.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="54" selection-start="3497" selection-end="3514" vertical-scroll-proportion="-4.576923" vertical-offset="765" max-vertical-offset="3961">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="46" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="3077">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +109,6 @@
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Proprietario.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Endereco.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/endereco/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Horario.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Reserva.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/reserva/horario.gsp" />
@@ -171,6 +152,7 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy" />
       </list>
     </option>
@@ -741,12 +723,12 @@
       <workItem from="1395189028001" duration="13141000" />
       <workItem from="1395271599916" duration="12577000" />
       <workItem from="1395360697104" duration="10633000" />
-      <workItem from="1395441062062" duration="15880000" />
+      <workItem from="1395441062062" duration="17202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189488000" />
+    <option name="totallyTimeSpent" value="190810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1080,13 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="488" selection-end="497" vertical-scroll-proportion="0.66233766" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="131" selection-end="174" vertical-scroll-proportion="0.39740258" vertical-offset="0" max-vertical-offset="385">
@@ -1122,13 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="71" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.52037615" vertical-offset="939" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/SalaoController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="202" column="0" selection-start="6574" selection-end="6574" vertical-scroll-proportion="0.7777778" vertical-offset="3060" max-vertical-offset="3468">
@@ -1152,14 +1120,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="46" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="3077">
+        <state line="6" column="40" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="2941">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="28" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.66233766" vertical-offset="357" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="51" selection-start="520" selection-end="520" vertical-scroll-proportion="-4.173913" vertical-offset="261" max-vertical-offset="1258">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="41" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.6819484" vertical-offset="1836" max-vertical-offset="4471">
+        <state line="189" column="0" selection-start="6267" selection-end="6267" vertical-scroll-proportion="0.9512894" vertical-offset="2881" max-vertical-offset="4471">
           <folding>
             <element signature="e#19#44#0" expanded="true" />
           </folding>

@@ -4,7 +4,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="layout" content="mainPrincipal"/>
+    <meta name="layout" content="main"/>
     <title>SalaoBy.Me - A beleza a um click de distância!</title>
 
     <style type="text/css">
@@ -46,7 +46,7 @@
 <body style="background-image: url(/images/fundosalaobyme.png);">
 
 <div class="pesquisa">
-    <div style="height: 50px">
+    <div>
         <g:form class="form-inline" method="GET" action="buscar" controller="Pesquisar">
 
             <div class="form-group col-sm-10">
@@ -111,26 +111,31 @@
 
 <div class="section">
 
-    <div class="container">
-
-        <div class="row">
             <div class="col-lg-12 text-center">
                 <h2>Os mais buscados do mes de Fevereiro</h2>
                 <hr>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="Salao/estab/4"><img class="img-responsive img-home-portfolio" src="images/01.jpg"></a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="Salao/estab/5"><img class="img-responsive img-home-portfolio" src="images/02.jpg"></a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="Salao/estab/3"><img class="img-responsive img-home-portfolio" src="images/03.jpg"></a>
-            </div>
-        </div><!-- /.row -->
+            <div class="destaque">
+                <a href="Salao/estab/4"><img class="" src="images/01.jpg"></a>
+                <h4><i class="fa fa-check-circle"></i> Luz Cabelos</h4>
+                <p>Localizado no centro da cidade, um salão moderno e preparado para atender com qualidade! Mais de 10 anos de qualidade aprovada! Acesse a pagina do salão <a href="Salao/estab/4"> Luz Cabelos</a></div>
 
-    </div><!-- /.container -->
+            </div>
+            <div class="destaque">
+                <a href="Salao/estab/5"><img class="" src="images/02.jpg"></a>
+                <h4><i class="fa fa-pencil"></i> Clínica de Estética ARN</h4>
+                <p>Premoções imperdíveis no nosso mês de aniversário! Venha conhecer nossos pacotes promocionais! Acesse a página de <a href="Salao/estab/5"> ARN</a>!</p>
 
+            </div>
+            <div class="destaque">
+                <a href="Salao/estab/3"><img class="" src="images/03.jpg"></a>
+                <h4><i class="fa fa-folder-open"></i> Dona Almeida</h4>
+                <p>Venha conferrir nossos pacotes para noivas! Promoções imperdiveis! Acesse a página de <a href="Salao/estab/3">Dona Almeida</a></p>
+
+            </div>
+</div>
+
+<!--
     <div class="container">
 
         <div class="row" >
@@ -147,25 +152,12 @@
                 <h3><i class="fa fa-folder-open"></i> Dona Almeida</h3>
                 <p>Venha conferrir nossos pacotes para noivas! Promoções imperdiveis! Acesse a página de <a href="Salao/estab/3">Dona Almeida</a></p>
             </div>
-        </div><!-- /.row -->
+        </div>
 
-    </div><!-- /.container -->
-
+    </div>
+    -->
 </div><!-- /.section -->
 
-<div class="container">
-
-    <div class="row well">
-        <div class="col-lg-8 col-md-8">
-            <h4>Faça parte do SalaoBy.Me</h4>
-            <p>Venha oferecer seus serviços e triplicar seus rendimentos junto com milahres de salões de destaque no país!</p>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <a class="btn btn-lg btn-primary pull-right" href="http://SalaoBy.Me">Salões</a>
-        </div>
-    </div><!-- /.row -->
-
-</div><!-- /.container -->
 
 <!-- JavaScript -->
 <script src="js/jquery-1.10.2.js"></script>
