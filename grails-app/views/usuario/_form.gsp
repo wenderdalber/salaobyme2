@@ -26,11 +26,7 @@
 	<g:textField name="nome" class="form-control" required="required" placeholder="Nome de usuario" value="${usuarioInstance?.nome}"/>
         </div>
 </div>
-    <div class="texto">
 
-        *O <strong>SalaoBy.Me</strong> respeita voce e não comercializa ou distribui seu cadastro a terceiros.
-
-    </div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'email', 'error')} required">
     <div class="form-group" style="width: 50%">

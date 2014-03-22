@@ -19,13 +19,15 @@
     .item{
         background: #333;
         text-align: center;
-        height: 300px !important;
+        height: 400px !important;
         color: #000000;
     }
     .carousel{
         margin-top: 20px;
         color: #000000;
+
     }
+
     .bs-example{
         margin: 20px;
     }
@@ -67,31 +69,22 @@
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
             <div class="active item">
-                <div class="fill" style="background-image:url('images/01.jpg');"></div>
+                <div class="fill" style="background: url('images/image-slide1.jpg') no-repeat; background-size: 1150px 400px; "></div>
                 <h2>Os melhores salões e serviços a um click de distância!</h2>
                 <div class="carousel-caption">
-                    <h3>Os melhores salões e serviços a um click de distância!</h3>
+
                     <p></p>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('images/02.jpg');"></div>
+                <div class="fill" style="background:url('images/image-slide2.jpg') no-repeat; background-size: 1150px 400px;"></div>
                 <h2>Slide 2</h2>
                 <div class="carousel-caption">
-                    <h3>Maquiagens para festas, casamentos e demais eventos sociais!</h3>
-                    <p></p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('images/03.jpg');"></div>
-                <h2>Slide 3</h2>
-                <div class="carousel-caption">
-                    <h3>Acesse nosso facebook <a href="http://facebook.com/salaobyme">SalaoByMe</a></h3>
+
                     <p></p>
                 </div>
             </div>

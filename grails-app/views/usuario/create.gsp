@@ -7,16 +7,23 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	<style>
         .passos{
-            width: 350px;
+
             height: 350px;
-            background-color: #ffffff;
             float:left;
+            margin-bottom: 50px;
+        }
+        .passos img{
+            width: 373px;
         }
 
         .divEspaco{
             width: 10px;
             height: 250px;
             float:left;
+        }
+        .create-usuario{
+            height: 1000px;
+
         }
 	</style>
     </head>
@@ -37,7 +44,7 @@
         </div>
 
     </div>
-		<div id="create-usuario" class="content scaffold-create" role="main">
+		<div id="create-usuario" class="content scaffold-create create-usuario" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
@@ -52,10 +59,9 @@
 			<g:form action="save" >
 				<fieldset class="form">
 					<g:render template="form"/>
+                    <g:submitButton name="create" class="btn btn-success btn-lg save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="btn btn-success save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
+
 			</g:form>
 		</div>
 	</body>
