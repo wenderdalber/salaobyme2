@@ -5,6 +5,10 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 <head>
+    <%
+        def url = "localhost:8080/SalaoByMe/"
+        %>
+    <input type="hidden" value="localhost:8080/SalaoByMe/" id="url" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <g:javascript library="jquery" plugin="jquery" />
@@ -40,17 +44,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/SalaoByMe">SalaoBy.me</a>
+                    <a class="navbar-brand" href="${createLink(uri: '/')}">SalaoBy.me</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="http://www.jquery2dotnet.com">Home</a></li>
-                        <li><a href="Pesquisar">Pesquisar</a></li>
-                        <li><a href="/Sobre">Sobre</a></li>
+                        <li><a href="${createLink(uri: '/Pesquisar/')}">Pesquisar</a></li>
+                        <li><a href="${createLink(uri: '/Salao/Sobre')}">Sobre</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Usuario/Create">Cadastrar</a></li>
+                        <li><a href="${createLink(uri: '/Usuario/Create')}">Cadastrar</a></li>
                         <li class="dropdown">
                             <a href="" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
                             <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
@@ -72,7 +76,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="form-group">
-                                                    <button type="submit" onclick="javascript: verificaSession(<%out.print(session.getAttribute("usuarioId"))%>)" class="btn btn-success btn-block">Entrar</button>
+                                                    <button type="submit" class="btn btn-success btn-block">Entrar</button>
                                                     ${flash.message}
                                                 </div>
                                             </g:form>
@@ -81,7 +85,7 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <strong><a href="Usuario/EsqueceuSenha" class="btn">Esqueci minha senha</a></strong>
+                                    <strong><a href="${createLink(uri: '/Usuario/esqueceuSenha')}" class="btn">Esqueci minha senha</a></strong>
                                 </li>
                             </ul>
                         </li>
@@ -103,14 +107,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/SalaoByMe">SalaoBy.me</a>
+                    <a class="navbar-brand" href="${createLink(uri: '/')}">SalaoBy.me</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="http://www.jquery2dotnet.com">Home</a></li>
-                        <li><a href="Pesquisar">Pesquisar</a></li>
-                        <li><a href="/Sobre">Sobre</a></li>
+                        <li><a href="${createLink(uri: '/Pesquisar')}">Pesquisar</a></li>
+                        <li><a href="${createLink(uri: '/Salao/Sobre')}">Sobre</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -119,7 +123,7 @@
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <a href="Usuario/MeuPerfil">Configurações</a>
+                                            <a href="${createLink(uri: '/Usuario/meuPerfil')}">Configurações</a>
                                                 <g:form class="form" role="form" method="post" controller="Usuario" action="sair" accept-charset="UTF-8" id="login-nav">
                                                     <input type="submit" value="Sair" class="btn btn-danger" />
                                                     ${flash.message}
@@ -212,9 +216,9 @@
         <div style="width: 10%"></div>
         <div style="width: 30%; float:left">
             <div class="col-lg-12">
-                <span> <a href="https://www.facebook.com/salaobyme"><img src="images/face.jpg" /> Facebook </a></span><br>
-                <span> <a href="http://twitter.com/SalaoByMe"> <img src=images/twitter.jpg>  Twitter </a></span><br>
-                <span> <a href="http://www.pinterest.com/salaobyme/"> <img src=images/pinte.jpg>  Pinterest</a> </span>
+                <span> <a href="https://www.facebook.com/salaobyme"><img src="${createLink(uri: '/images/face.jpg')}" /> Facebook </a></span><br>
+                <span> <a href="http://twitter.com/SalaoByMe"> <img src=${createLink(uri: '/images/twitter.jpg')}>  Twitter </a></span><br>
+                <span> <a href="http://www.pinterest.com/salaobyme/"> <img src=${createLink(uri: '/images/pinte.jpg')}>  Pinterest</a> </span>
             </div>
         </div>
     </footer>

@@ -4,7 +4,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="mainPrincipal"/>
     <title>SalaoBy.Me - A beleza a um click de distância!</title>
 
     <style type="text/css">
