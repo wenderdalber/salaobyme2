@@ -81,7 +81,37 @@
     <favorites_list name="SalaoByMe" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="UsuarioController.groovy" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="41" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.6819484" vertical-offset="1836" max-vertical-offset="4471">
+              <folding>
+                <element signature="e#19#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainPrincipal.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/mainPrincipal.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="54" selection-start="3497" selection-end="3514" vertical-scroll-proportion="-4.576923" vertical-offset="765" max-vertical-offset="3961">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.gsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="46" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="3077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -128,20 +158,20 @@
         <option value="$PROJECT_DIR$/grails-app/views/usuario/create.gsp" />
         <option value="$PROJECT_DIR$/web-app/css/estilo.css" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/pesquisar/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/salaobyme/Servico.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/salao/_form.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/pesquisar/listaSaloes.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/meuPerfil.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/salao/estab.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/SalaoController.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/mainPrincipal.gsp" />
         <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/SalaoController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/pesquisar/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy" />
       </list>
     </option>
   </component>
@@ -290,6 +320,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="salao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalaoByMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SalaoByMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pesquisar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -689,16 +741,16 @@
       <workItem from="1395189028001" duration="13141000" />
       <workItem from="1395271599916" duration="12577000" />
       <workItem from="1395360697104" duration="10633000" />
-      <workItem from="1395441062062" duration="8853000" />
+      <workItem from="1395441062062" duration="15880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182461000" />
+    <option name="totallyTimeSpent" value="189488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -714,7 +766,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22507553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22507553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -866,7 +918,7 @@
         <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.046831954" vertical-offset="0" max-vertical-offset="363" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/esqueceuSenha.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/esqueceu_Senha.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="94" selection-start="480" selection-end="480" vertical-scroll-proportion="0.37910447" vertical-offset="196" max-vertical-offset="646" />
       </provider>
@@ -922,7 +974,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/salao/meuSalao.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/salao/meu_Salao.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="34" selection-start="231" selection-end="231" vertical-scroll-proportion="-1.7346939" vertical-offset="102" max-vertical-offset="782">
           <folding />
@@ -960,20 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/pesquisar/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="78" selection-start="3050" selection-end="3050" vertical-scroll-proportion="-3.4693878" vertical-offset="1309" max-vertical-offset="3111">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/pesquisar/listaSaloes.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.26984128" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/salao/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="10" selection-start="288" selection-end="288" vertical-scroll-proportion="-0.36842105" vertical-offset="255" max-vertical-offset="646">
@@ -1005,7 +1043,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/meuPerfil.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/meu_Perfil.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="131" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.7368421" vertical-offset="731" max-vertical-offset="1479">
           <folding />
@@ -1020,20 +1058,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/views/reserva/horario.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="8" selection-start="916" selection-end="916" vertical-scroll-proportion="1.3630953" vertical-offset="171" max-vertical-offset="782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="21" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.60746" vertical-offset="627" max-vertical-offset="1190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/SalaoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="41" selection-start="6245" selection-end="6245" vertical-scroll-proportion="4.5751634" vertical-offset="1643" max-vertical-offset="3468">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/salaobyme/Salao.groovy">
@@ -1056,15 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="49" selection-start="939" selection-end="939" vertical-scroll-proportion="0.6666667" vertical-offset="425" max-vertical-offset="4233">
-          <folding>
-            <element signature="e#19#53#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="41" selection-start="488" selection-end="497" vertical-scroll-proportion="0.66233766" vertical-offset="0" max-vertical-offset="765">
@@ -1075,27 +1090,6 @@
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="131" selection-end="174" vertical-scroll-proportion="0.39740258" vertical-offset="0" max-vertical-offset="385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.2947977" vertical-offset="204" max-vertical-offset="4029">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/mainPrincipal.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="40" selection-start="3500" selection-end="3500" vertical-scroll-proportion="0.34393063" vertical-offset="765" max-vertical-offset="3961">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="46" selection-start="153" selection-end="153" vertical-scroll-proportion="0.2947977" vertical-offset="0" max-vertical-offset="3077">
           <folding />
         </state>
       </provider>
@@ -1111,6 +1105,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="35" selection-start="3325" selection-end="3325" vertical-scroll-proportion="4.482972" vertical-offset="133" max-vertical-offset="1904">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/pesquisar/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="42" selection-start="4596" selection-end="4596" vertical-scroll-proportion="-1.0408163" vertical-offset="2278" max-vertical-offset="3111">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/pesquisar/listaSaloes.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/PesquisarController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="71" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.52037615" vertical-offset="939" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/SalaoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="202" column="0" selection-start="6574" selection-end="6574" vertical-scroll-proportion="0.7777778" vertical-offset="3060" max-vertical-offset="3468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="30" selection-start="606" selection-end="606" vertical-scroll-proportion="0.5049505" vertical-offset="51" max-vertical-offset="4097">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/mainPrincipal.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="54" selection-start="3497" selection-end="3514" vertical-scroll-proportion="-4.576923" vertical-offset="765" max-vertical-offset="3961">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="46" selection-start="153" selection-end="153" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="3077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/salaobyme/UsuarioController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="41" selection-start="4253" selection-end="4253" vertical-scroll-proportion="0.6819484" vertical-offset="1836" max-vertical-offset="4471">
+          <folding>
+            <element signature="e#19#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

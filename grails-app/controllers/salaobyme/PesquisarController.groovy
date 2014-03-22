@@ -45,17 +45,21 @@ class PesquisarController {
         render(view: "index", model: [saloes:saloes])
     }
 
-    def buscarServicos(int id){
+    def buscarServicos(Long id){
 
         def salao = Salao.findById(id)
 
-        redirect(action: 'listandoServico', params:[id:salao.id])
+        def lista = salao
+        //redirect(action: 'listandoServico', params:[id:salao.id])
+        render(view: "/pesquisar/listaSaloes.gsp", model:[lista:lista])
     }
 
-    def listandoServico(){
+    def listandoServico(int id){
+
+        def salao = Salao.findById(id)
 
         def lista = Salao.createCriteria().list {
-            servicos{
+            salao.servicos{
             }
         }
 

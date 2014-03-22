@@ -135,7 +135,7 @@
                 <input type="text" id="id" value="${salao.id}" hidden="hidden"><br>
                 <a href="javascript: abre(${salao.id})"><strong>Servicos do Salão</strong></a></div>
                 
-                <g:formRemote method="get" name="listaSaloes" url="[controller: 'pesquisar', action: 'buscarServicos']" update="divSalao">
+                <g:formRemote method="post" name="listaSaloes" url="[controller: 'pesquisar', action: 'buscarServicos']" update="divSalao">
 
                     <input type="text" name="id" value="${salao.id}" hidden="hidden">
                     <input type="submit" value="busca">
