@@ -19,9 +19,10 @@ class PesquisarController {
             (palavra.length() > 3)? palavra : null
         }
 
-        def saloes = Salao.createCriteria().list{
+        def saloes = Salao.createCriteria().listDistinct{
             createAlias("servicos","servico")
             createAlias("servico.categoria","categoria")
+            createAlias("endereco", "endereco")
 
             or{
                 pesquisa.each { palavra ->
@@ -30,12 +31,11 @@ class PesquisarController {
                         ilike("servico.descricao","%${palavra}%")
                         ilike("categoria.nome","%${palavra}%")
 
-                        endereco{
-                            ilike("logradouro","%${palavra}%")
-                            ilike("bairro","%${palavra}%")
-                            ilike("cidade","%${palavra}%")
-                            ilike("estado","%${palavra}%")
-                        }
+                        ilike("endereco.logradouro","%${palavra}%")
+                        ilike("endereco.bairro","%${palavra}%")
+                        ilike("endereco.cidade","%${palavra}%")
+                        ilike("endereco.estado","%${palavra}%")
+
                     }
                 }
 
