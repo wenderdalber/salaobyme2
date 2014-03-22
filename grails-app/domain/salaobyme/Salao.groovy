@@ -15,4 +15,8 @@ class Salao {
         cnpj nullable:false, blank:false
         endereco nullable:true
     }
+
+    String toString() {
+        return descricao;
+    }
 }

@@ -119,13 +119,13 @@
                 <hr>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="images/01.jpg"></a>
+                <a href="Salao/estab/4"><img class="img-responsive img-home-portfolio" src="images/01.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="images/02.jpg"></a>
+                <a href="Salao/estab/5"><img class="img-responsive img-home-portfolio" src="images/02.jpg"></a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html"><img class="img-responsive img-home-portfolio" src="images/03.jpg"></a>
+                <a href="Salao/estab/3"><img class="img-responsive img-home-portfolio" src="images/03.jpg"></a>
             </div>
         </div><!-- /.row -->
 
@@ -136,16 +136,16 @@
         <div class="row" >
             <div class="col-lg-4 col-md-4 divPrincipal">
                 <h3><i class="fa fa-check-circle"></i> Luz Cabelos</h3>
-                <p>Localizado no centro da cidade, um salão moderno e preparado para atender com qualidade! Mais de 10 anos de qualidade aprovada! Acesse a pagina do salão <a href="/Salao/LuzCabelos"> Luz Cabelos</a></div>
+                <p>Localizado no centro da cidade, um salão moderno e preparado para atender com qualidade! Mais de 10 anos de qualidade aprovada! Acesse a pagina do salão <a href="Salao/estab/4"> Luz Cabelos</a></div>
             <div class="divEspaco"></div>
             <div class="col-lg-4 col-md-4 divPrincipal">
                 <h3><i class="fa fa-pencil"></i> Clínica de Estética ARN</h3>
-                <p>Premoções imperdíveis no nosso mês de aniversário! Venha conhecer nossos pacotes promocionais! Acesse a página de <a href="/Salao/ARN"> ARN</a>!</p>
+                <p>Premoções imperdíveis no nosso mês de aniversário! Venha conhecer nossos pacotes promocionais! Acesse a página de <a href="Salao/estab/5"> ARN</a>!</p>
             </div>
             <div class="divEspaco"></div>
             <div class="col-lg-4 col-md-4 divPrincipal">
                 <h3><i class="fa fa-folder-open"></i> Dona Almeida</h3>
-                <p>Venha conferrir nossos pacotes para noivas! Promoções imperdiveis! Acesse a página de <a href="/Salao/DonaAlmeida">Dona Almeida</a></p>
+                <p>Venha conferrir nossos pacotes para noivas! Promoções imperdiveis! Acesse a página de <a href="Salao/estab/3">Dona Almeida</a></p>
             </div>
         </div><!-- /.row -->
 

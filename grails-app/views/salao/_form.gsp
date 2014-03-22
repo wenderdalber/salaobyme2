@@ -82,7 +82,7 @@
 		<g:message code="salao.servicos.label" default="Servicos" />
 		
 	</label>
-	<g:select name="servicos" from="${salaobyme.Servico.list()}" multiple="multiple" optionKey="id" size="5" value="${salaoInstance?.servicos*.id}" class="textField form-control many-to-many"/>
+	<g:select name="servicos" from="${salaobyme.Servico.list()}" multiple="multiple" optionKey="id" size="5" value="${salaoInstance?.servicos*.id}" optionValue="${salaoInstance?.servicos*.descricao}" valueMessagePrefix="${salaoInstance?.servicos*.descricao}" class="textField form-control many-to-many"/>
     </div>
     </div>
 </div>

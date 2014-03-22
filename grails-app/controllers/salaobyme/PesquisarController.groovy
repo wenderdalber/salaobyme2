@@ -1,5 +1,7 @@
 package salaobyme
 
+import org.hibernate.criterion.CriteriaSpecification
+
 class PesquisarController {
 
     def index() {
@@ -34,8 +36,6 @@ class PesquisarController {
                             ilike("cidade","%${palavra}%")
                             ilike("estado","%${palavra}%")
                         }
-
-
                     }
                 }
 
@@ -49,7 +49,16 @@ class PesquisarController {
 
         def salao = Salao.findById(id)
 
-        render(view: "/pesquisar/listaSaloes.gsp", model: [salao:salao])
+        redirect(action: 'listandoServico', params:[id:salao.id])
+    }
 
+    def listandoServico(){
+
+        def lista = Salao.createCriteria().list {
+            servicos{
+            }
+        }
+
+        render(view: "/pesquisar/listaSaloes.gsp", model:[lista:lista])
     }
 }

@@ -1,11 +1,20 @@
-<g:if test="${salao != null}">
+<g:if test="${lista.size > 0}">
 
-    <g:each in="${salao}" var="salao">
+
         <a href="javascript: fecha()">Fechar</a>
-        ${salao.nome}
-        ${salao.cnpj}
 
+        <div class="control-group">
+            <label class="control-label" for="servicos">Serviços</label>
+            <div class="controls">
+                <label class="checkbox" for="servicos-0">
+    <g:each in="${lista}" var="servico">
+                    <input type="checkbox" name="servicos" id="servicos-0" value="${lista.servicos.id}">
+                    ${lista.servicos.descricao}
     </g:each>
+                </label>
+            </div>
+        </div>
+
 
 
 </g:if>

@@ -199,7 +199,8 @@ class SalaoController {
 
         Salao salao = Salao.get(id)
 
+        def listaServico =  salao.servicos
 
-        render(view: "estab", model: [salao:salao])
+        render(view: "estab", model: [salao:salao, lista:lista])
     }
 }

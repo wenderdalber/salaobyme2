@@ -89,8 +89,9 @@
     <div class="divServico">
         <center><h2>Serviços ${salao.nome}:</h2><br></center>
 
-        <g:each in="${servicos}">
-            ${servicos.descricao}
+        <g:each in="${lista}">
+            ${lista.servicos.descricao}
+            ${lista.servicos.preco}
         </g:each>
 
     </div>

@@ -1,5 +1,6 @@
 package salaobyme
 
+import java.security.MessageDigest
 import java.util.Properties;
 import javax.mail.Address;
 import javax.mail.Message;
@@ -9,6 +10,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
 import salaobyme.PasswordCodec;
 
 class UsuarioController {
@@ -34,7 +36,6 @@ class UsuarioController {
 
     def save() {
         def usuarioInstance = new Usuario(params)
-        usuarioInstance.senha =  params.senha.encodeAsPassword()
         usuarioInstance.permissao = "Usuario"
 
         if (!usuarioInstance.save(flush: true)) {
@@ -149,12 +150,20 @@ class UsuarioController {
 
     def meuPerfil(){
 
+        if(session.getAttribute("usuarioPermissao") == "Admin"){
         int idProprietario = session.getAttribute("usuarioId")
 
         Proprietario proprietario = Proprietario.findById(idProprietario)
 
         render(view: "meuPerfil", model: [proprietario:proprietario])
+        }else{
+         int idUsuario = session.getAttribute("usuarioId")
 
+         Usuario usuario = Usuario.findById(idUsuario)
+         Reserva reserva = Reserva.findByUsuario(usuario)
+
+                render(view: "meuPerfil", model: [usuario:usuario, reserva:reserva])
+        }
     }
 
     def Sair(){
@@ -163,6 +172,7 @@ class UsuarioController {
         session.invalidate()
         redirect(uri: "/")
     }
+
 
     public void EnviarEmail(String email, String novaSenha) {
         Properties props = new Properties();

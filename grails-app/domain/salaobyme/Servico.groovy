@@ -15,4 +15,8 @@ class Servico {
         descricao nullable:false, blank:false
         preco nullable:false, blank:false
     }
+
+    String toString() {
+        return descricao;
+    }
 }

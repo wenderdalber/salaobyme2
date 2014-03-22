@@ -113,14 +113,13 @@
                         <li><a href="/Sobre">Sobre</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Usuario/Create">Cadastrar</a></li>
                         <li class="dropdown">
                             <a href="" class="dropdown-toggle" data-toggle="dropdown"><%out.print(session.getAttribute("usuarioNome"))%> <b class="caret"></b></a>
                             <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <a href="#">Configurações</a>
+                                            <a href="Usuario/MeuPerfil">Configurações</a>
                                                 <g:form class="form" role="form" method="post" controller="Usuario" action="sair" accept-charset="UTF-8" id="login-nav">
                                                     <input type="submit" value="Sair" class="btn btn-danger" />
                                                     ${flash.message}
