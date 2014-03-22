@@ -29,6 +29,12 @@ class SalaoController {
 
     def save() {
         def salaoInstance = new Salao(params)
+
+        int idProprietario = session.getAttribute("usuarioId")
+        Proprietario proprietario = Proprietario.findByid(idProprietario)
+
+        salaoInstance.proprietario = proprietario
+
         if (!salaoInstance.save(flush: true)) {
             render(view: "create", model: [salaoInstance: salaoInstance])
             return
