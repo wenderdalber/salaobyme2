@@ -11,6 +11,10 @@ class Salao {
     static hasMany = [servicos:Servico]
     static belongsTo = [Proprietario]
 
+    static mapping = {
+        servicos lazy: true
+    }
+
     static constraints = {
         nome nullable:false, blank:false
         cnpj nullable:false, blank:false

@@ -85,7 +85,7 @@
             jQuery("#divSalao").fadeOut()
         }
         function listarServicos(){
-            ${remoteFunction(controller: 'Pesquisar', action: 'listandoServico', update: 'divSalao')}
+            ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao')}
         }
     </script>
 
@@ -129,18 +129,19 @@
                 <div class="divImg"><img src="../images/01.jpg" class="img" /></div>
                 <div class="espacoImg"></div>
                 <div class="divS"><h2><label>Salão: ${salao.nome} </label></h2>
+                <div>${salao.descricao}</div><br>
                 <strong>Endereço: </strong> ${salao.endereco.logradouro}<br>
                 <strong>Bairro: </strong>${salao.endereco.bairro} <br>
                 <strong>Cidade: </strong>${salao.endereco.cidade} <strong>Estado: </strong>${salao.endereco.estado} <strong>CEP: </strong>${salao.endereco.cep}
                 <input type="text" id="id" value="${salao.id}" hidden="hidden"><br>
-                <a href="javascript: abre(${salao.id})"><strong>Servicos do Salão</strong></a></div>
-                
                 <g:formRemote method="post" name="listaSaloes" url="[controller: 'pesquisar', action: 'buscarServicos']" update="divSalao">
 
-                    <input type="text" name="id" value="${salao.id}" hidden="hidden">
-                    <input type="submit" value="busca">
+                        <input type="text" name="id" value="${salao.id}" hidden="hidden">
+                        <input type="submit" class="btn btn-warning" value="busca">
 
                 </g:formRemote>
+                <a href="javascript: abre(${salao.id})"><strong>Servicos do Salão</strong></a></div>
+
             </g:each>
         </g:if>
         <g:else>

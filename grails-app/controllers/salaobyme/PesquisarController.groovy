@@ -49,20 +49,20 @@ class PesquisarController {
 
         def salao = Salao.findById(id)
 
-        def lista = salao
+        def lista = salao.servicos
+
+        //def lista = salao.servicos.asList()
         //redirect(action: 'listandoServico', params:[id:salao.id])
         render(view: "/pesquisar/listaSaloes.gsp", model:[lista:lista])
     }
 
-    def listandoServico(int id){
+    def listarSaloes(int id){
 
         def salao = Salao.findById(id)
 
-        def lista = Salao.createCriteria().list {
-            salao.servicos{
-            }
-        }
+        def lista = salao.servicos
 
         render(view: "/pesquisar/listaSaloes.gsp", model:[lista:lista])
+        //render(view: "listaSaloes", model:[lista:lista])
     }
 }
