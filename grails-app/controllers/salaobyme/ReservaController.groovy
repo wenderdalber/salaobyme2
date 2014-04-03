@@ -100,6 +100,28 @@ class ReservaController {
         }
     }
 
+    def reservar(int servicos){
+        def lista = params.list('check')
+        //Usuario usuario = findById(session.getAttribute("usuarioId"))
+        Usuario usuario = Usuario.findById(2)
+        Servico servico = Servico.findById(servicos)
+        //print lista+")"
+        lista.each{
+            String[] hora = it.split("-")
+            //println hora[0]+"   "+hora[1]
+            Date date = new Date()
+            println hora[0]
+            hora[0].replace("/","-")
+            date = Date.parse(hora[0])
+            print "-------------------"+date.getAt(Calendar.DAY_OF_WEEK)
+            DiaHorario diaHorario = DiaHorario.findByDiaAndHorario(hora[0])
+
+
+        }
+
+        render(view: "reservar")
+    }
+
     def horario(){
 
         Servico servico = Servico.get(1)

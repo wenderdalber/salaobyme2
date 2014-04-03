@@ -79,7 +79,7 @@
 
         function abre(id){
             jQuery("#divSalao").fadeIn()
-                ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params: ['id=' + id])}
+                ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params="\'id=\'+"+id)}
         }
         function fecha(){
             jQuery("#divSalao").fadeOut()
@@ -134,15 +134,12 @@
                 <strong>Bairro: </strong>${salao.endereco.bairro} <br>
                 <strong>Cidade: </strong>${salao.endereco.cidade} <strong>Estado: </strong>${salao.endereco.estado} <strong>CEP: </strong>${salao.endereco.cep}
                 <input type="text" id="id" value="${salao.id}" hidden="hidden"><br>
-                <g:formRemote method="post" name="listaSaloes" url="[controller: 'pesquisar', action: 'buscarServicos']" update="divSalao">
+                    <input type="button" class="btn btn-warning" value="Buscar" onclick="abre(); ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params:'\'id=\' + '+salao.id)}" />
 
-                        <input type="text" name="id" value="${salao.id}" hidden="hidden">
-                        <input type="submit" class="btn btn-warning" value="busca">
-
-                </g:formRemote>
-                <a href="javascript: abre(${salao.id})"><strong>Servicos do Salão</strong></a></div>
+                </div>
 
             </g:each>
+
         </g:if>
         <g:else>
             <h2>Sem resultados...</h2>
@@ -150,7 +147,7 @@
         </div>
         <div class="espaco"></div>
 
-        <div id="divSalao">
+        <div id="divSalao" style="overflow: auto; padding: 20px; margin-top: -150px;margin-left: 200px;">
 
             <a href="javascript: fecha()">Fechar</a>
 
