@@ -7,5 +7,7 @@ class DiaHorario {
     Horario horario
 
     static constraints = {
+        dia lazy: true
+        horario lazy: true
     }
 }

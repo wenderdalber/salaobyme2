@@ -102,20 +102,50 @@ class ReservaController {
 
     def reservar(int servicos){
         def lista = params.list('check')
+        def idSalao = params.idSalao
+        def nomeServico = params.servicos
+        //println "==============================================================================  "+nomeServico
         //Usuario usuario = findById(session.getAttribute("usuarioId"))
-        Usuario usuario = Usuario.findById(2)
+        Usuario usuario = Usuario.findById(session.getAttribute("usuarioId"))
         Servico servico = Servico.findById(servicos)
         //print lista+")"
         lista.each{
             String[] hora = it.split("-")
             //println hora[0]+"   "+hora[1]
             Date date = new Date()
-            println hora[0]
-            hora[0].replace("/","-")
-            date = Date.parse(hora[0])
-            print "-------------------"+date.getAt(Calendar.DAY_OF_WEEK)
-            DiaHorario diaHorario = DiaHorario.findByDiaAndHorario(hora[0])
+            //print hora[0]+" | "+hora[1]+"| "
+            //hora[0]=hora[0].replace("/","-")
+            //println hora[0]+"||"
+            date = Date.parse("yyyy/MM/dd",hora[0])
+            //println data+"|||"
+            //println date.toString()+" dia = "+date.getAt(Calendar.DAY_OF_WEEK)+"  ||||"
 
+            Dia dia = Dia.findByDia(date.getAt(Calendar.DAY_OF_WEEK))
+            //print dia.dia+" "+dia.id
+            Horario horario = Horario.findByHoraInicio(hora[1])
+            //print horario.horaInicio+" "+horario.id
+            //DiaHorario diaHorario = DiaHorario.findByDiaAndHorario(dia,horario)
+            def diaHorarios = DiaHorario.list()
+            diaHorarios.each {dh ->
+                print dh.dia.dia+" - "+dh.horario.horaInicio+" "
+                if (dh.dia.dia==dia.dia && dh.horario.horaInicio==horario.horaInicio)
+                {
+                    Reserva reserva = new Reserva()
+                    reserva.diaHorario=dh
+                    reserva.usuario = usuario
+                    Salao salao = Salao.findById(idSalao)
+                    Servico objServico = Servico.findByDescricao(nomeServico)
+                    reserva.salao = salao
+                    reserva.servico = objServico
+                    reserva.situacao = 2
+                    reserva.dataReserva= date
+
+                    if(!reserva.save(flush:true)){
+                        flash:message("Reserva efetuada com sucesso!")
+                    }
+                }
+            }
+            //print diaHorario.dia.id+" "+diaHorario.horario.horaInicio
 
         }
 

@@ -81,6 +81,15 @@
             jQuery("#divSalao").fadeIn()
                 ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params="\'id=\'+"+id)}
         }
+
+        function surge(){
+            jQuery("#btnAnterior").fadeIn()
+        }
+
+        function some(){
+            jQuery("#btnAnterior").fadeOut()
+        }
+
         function fecha(){
             jQuery("#divSalao").fadeOut()
         }
@@ -134,8 +143,7 @@
                 <strong>Bairro: </strong>${salao.endereco.bairro} <br>
                 <strong>Cidade: </strong>${salao.endereco.cidade} <strong>Estado: </strong>${salao.endereco.estado} <strong>CEP: </strong>${salao.endereco.cep}
                 <input type="text" id="id" value="${salao.id}" hidden="hidden"><br>
-                    <input type="button" class="btn btn-warning" value="Buscar" onclick="abre(); ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params:'\'id=\' + '+salao.id)}" />
-
+                    <input type="button" class="btn btn-primary" value="Selecione um serviço" onclick="abre(); ${remoteFunction(controller: 'Pesquisar', action: 'buscarServicos', update: 'divSalao', params:'\'id=\' + '+salao.id)}" />
                 </div>
 
             </g:each>
@@ -166,6 +174,7 @@
 <script type="text/javascript">
     fecha()
     listarSaloes()
+    some()
 </script>
 
 <!-- JavaScript -->
