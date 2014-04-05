@@ -105,7 +105,7 @@ class PesquisarController {
 
     def maisDatas(String dias){
 
-        //print "-----------------------------------------         "+dias+      "||||||||||||||||||"
+        print "-----------------------------------------         "+dias+      "||||||||||||||||||"
 
         def split = dias.split("-")
         def salao = Salao.findById(split[1])
@@ -161,7 +161,8 @@ class PesquisarController {
         }
         //render(view: "/reserva/horario",model :[datas:datas, todosHorarios:todosHorarios, reservas:reservas, horariosOcupados:horariosOcupados] )
 
-        render(view: "/pesquisar/listaSaloes.gsp", model :[lista:lista, datas:datas, todosHorarios:todosHorarios, reservas:reservas, servico: servico, horariosOcupados:horariosOcupados])
+        render(view: "/pesquisar/listaSaloes.gsp", model :[lista:lista, datas:datas, todosHorarios:todosHorarios, reservas:reservas, servico: servico, horariosOcupados:horariosOcupados, idSalao:split[1]])
+
         //render(view: "listaSaloes", model:[lista:lista, ])
     }
     def menosDatas(String dias){
@@ -221,7 +222,7 @@ class PesquisarController {
         }
         //render(view: "/reserva/horario",model :[datas:datas, todosHorarios:todosHorarios, reservas:reservas, horariosOcupados:horariosOcupados] )
 
-        render(view: "/pesquisar/listaSaloes.gsp", model :[lista:lista, datas:datas, todosHorarios:todosHorarios, reservas:reservas, servico: servico, horariosOcupados:horariosOcupados])
+        render(view: "/pesquisar/listaSaloes.gsp", model :[lista:lista, datas:datas, todosHorarios:todosHorarios, reservas:reservas, servico: servico, horariosOcupados:horariosOcupados, idSalao:split[1]])
         //render(view: "listaSaloes", model:[lista:lista, ])
     }
 
