@@ -30,9 +30,12 @@
 
 <body>
 
-<div style="width: 200px; height: 200px; margin: 0 auto; background-color: #ffffff">
+<div style="width: 400px; height: 100px; margin: 200px 0 0 500px; background-color: #ffffff;     -moz-border-radius: 10px; /* Para Firefox */
+-webkit-border-radius: 10px; /*Para Safari e Chrome */
+border-radius: 10px; /* Para Opera 10.5+*/">
 
-    <h3>Reserva efetuada com sucesso!</h3>
+    <span style="padding: 2000px 0 0 0"><center><h3>Reserva efetuada com sucesso!</h3></center></span>
+    <center><a class="btn btn-primary" href="/SalaoByMe">Página Inicial</a></center>
 
 </div>
 
